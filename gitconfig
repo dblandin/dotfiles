@@ -1,0 +1,11 @@
+[user]
+	name = Devon Blandin
+	email = dblandin@gmail.com
+[core]
+	excludesfile = /Users/dblandin/.gitignore_global
+[github]
+	user = dblandin
+[alias]
+	co = checkout
+	br = branch
+	cm = commit
