@@ -13,15 +13,15 @@ set nocompatible
 set history=50
 set ruler
 
+" autoload .vimrc upon edit
+autocmd! bufwritepost .vimrc source ~/.vimrc
+
+syntax on
+
 " solarized options 
 let g:solarized_termcolors = 256
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
-colorscheme solarized
 set background=dark
-
-filetype indent plugin on
-syntax on
+colorscheme solarized
 
 set hlsearch
 set incsearch
@@ -32,10 +32,18 @@ set clipboard=unnamed
 set softtabstop=2 shiftwidth=2 expandtab
 set autoindent
 
+filetype indent plugin on
+set ofu=syntaxcomplete#Complete
 autocmd FileType java setlocal softtabstop=4 shiftwidth=4 expandtab
 
 let mapleader=","
 let g:mapleader=","
+
+" status line
+set statusline=%t 
+
+" backup settings
+set backupdir=~/tmp
 
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
