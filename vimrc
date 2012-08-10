@@ -68,6 +68,8 @@ cmap cd. lcd %:p:h
 nnoremap <silent> <F8> :CommandT<CR> 
 
 nnoremap <silent> <F6> :NERDTreeToggle<CR> 
+autocmd vimenter * if !argc() | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 nnoremap <silent> <F7> :TagbarToggle<CR> 
 let g:tagbar_autofocus = 1
