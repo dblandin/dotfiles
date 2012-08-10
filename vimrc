@@ -65,7 +65,7 @@ cnoremap <C-E>      <End>
 
 cmap cd. lcd %:p:h
 
-nnoremap <silent> <F8> :CommandT<CR> 
+nnoremap <silent> <F8> :Ctrlp<CR> 
 
 nnoremap <silent> <F6> :NERDTreeToggle<CR> 
 autocmd vimenter * if !argc() | NERDTree | endif
