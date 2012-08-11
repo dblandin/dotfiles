@@ -8,5 +8,4 @@ The dotfiles of Devon Blandin
     cd dotfiles
     git submodule init
     git submodule update
-    sudo chmod +x install.sh
     ./install.sh
