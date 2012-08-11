@@ -43,7 +43,8 @@ let g:mapleader=","
 set statusline=%t 
 
 " backup settings
-set backupdir=~/tmp
+set backupdir=~/tmp/swap
+set directory=~/tmp/backup
 
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
