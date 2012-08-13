@@ -24,9 +24,10 @@ DISABLE_AUTO_TITLE="true" # was also messing up tmux window titles
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler brew gem dblandin cloudapp git-flow github rails3 rvm)
+plugins=(git bundler brew gem cloudapp git-flow github rails3 rvm)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.plugins/*.zsh
 
 # Customize to your needs...
 
@@ -35,13 +36,13 @@ alias pear="php /usr/lib/php/pear/pearcmd.php"
 alias pecl="php /usr/lib/php/pear/peclcmd.php" 
 
 # tmuxinator and teamocil
-export EDITOR='vim'
-export SHELL='/bin/zsh'
-compctl -g '~/.teamocil/*(:t:r)' teamocil
+export EDITOR=vim
+export SHELL=/bin/zsh
+compctl -g '$HOME/.teamocil/*(:t:r)' teamocil
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator && source $HOME/.tmuxinator/scripts/tmuxinator_completion
 
 # PATH config
-export PATH=~/bin:/usr/local/bin:/local/node/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/sbin:/usr/local/share/python
+export PATH=$HOME/bin:/usr/local/bin:/local/node/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/sbin:/usr/local/share/python
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session as a function
