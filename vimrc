@@ -45,6 +45,8 @@ au CursorHold * checktime
 let mapleader=","
 let g:mapleader=","
 
+" restore original comma functionality by
+" mapping to backslash
 noremap \ ,
 
 " status line
