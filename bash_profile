@@ -8,18 +8,18 @@ export EDITOR='vim'
 #for TMUX in iTerm2 to support VIM colorschemes
 [[ $TERM == "screen" ]] && export -p TERM="screen-256color"
 
-# bash completion
+# homebrew bash completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
 
 # git and git flow bash completion
-source ~/.git-completion.sh
-source ~/.git-flow-completion.sh
+source ~/.plugins/git-completion.sh
+source ~/.plugins/git-flow-completion.sh
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator_completion ]] && source $HOME/.tmuxinator/scripts/tmuxinator_completion
 
 # show branch in status line
-source ~/.git-prompt.sh
+source ~/.plugins/git-prompt.sh
 PS1='[\W$(__git_ps1 " (%s)")]\$ '
 
 # rvm

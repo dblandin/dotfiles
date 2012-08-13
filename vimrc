@@ -26,6 +26,9 @@ colorscheme solarized
 set hlsearch
 set incsearch
 
+" show operators on status line
+set showcmd
+
 set number
 set clipboard=unnamed
 
@@ -36,8 +39,13 @@ filetype indent plugin on
 set ofu=syntaxcomplete#Complete
 autocmd FileType java setlocal softtabstop=4 shiftwidth=4 expandtab
 
+" warn when file changes
+au CursorHold * checktime
+
 let mapleader=","
 let g:mapleader=","
+
+noremap \ ,
 
 " status line
 set statusline=%t 
@@ -66,7 +74,7 @@ cnoremap <C-E>      <End>
 
 cmap cd. lcd %:p:h
 
-nnoremap <silent> <F8> :Ctrlp<CR> 
+nnoremap <silent> <F8> :CtrlP<CR> 
 
 nnoremap <silent> <F6> :NERDTreeToggle<CR> 
 autocmd vimenter * if !argc() | NERDTree | endif
