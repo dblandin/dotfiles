@@ -1,5 +1,23 @@
 #!/bin/sh
 
+# check if homebrew is installed
+which -s brew
+if [[ $? != 0 ]] ; then
+    # Install Homebrew
+    # https://github.com/mxcl/homebrew/wiki/installation
+    echo "Installing Homebrew..."
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"
+else
+    echo "Updating Homebrew..."
+    brew update
+fi
+
+# check if Git is installed
+which -s git || brew install git
+
+mkdir -p $HOME/tmp/swap 
+mkdir -p $HOME/tmp/backup
+
 cutstring="DO NOT EDIT BELOW THIS LINE"
 
 for name in *; do
@@ -33,3 +51,6 @@ for name in *; do
     fi
   fi
 done
+
+echo "Changing default shell to zsh..."
+chsh -s `which zsh`
