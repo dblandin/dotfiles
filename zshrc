@@ -24,7 +24,7 @@ DISABLE_AUTO_TITLE="true" # was also messing up tmux window titles
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler brew gem cloudapp git-flow github rails3 rvm)
+plugins=(git bundler brew gem cloudapp git-flow github rails3 rvm autojump)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.plugins/*.zsh
