@@ -57,6 +57,9 @@ nmap <silent> <Leader>rcrl :call RunLastConqueCommand()<CR>
 nnoremap <silent> <C-s> :call RelatedSpecVOpen()<CR>
 nnoremap <silent> ,<C-s> :call RelatedSpecOpen()<CR>
 
+map <Leader>p <C-^> " Go to previous file
+map <Leader>n <C-^> " Go to next file
+
 
 " status line
 set statusline=%t 
