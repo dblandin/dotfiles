@@ -64,3 +64,6 @@
 [submodule "vim/bundle/rename.vim"]
 	path = vim/bundle/rename.vim
 	url = git://github.com/danro/rename.vim.git
+[submodule "vim/bundle/vim-ruby-conque"]
+	path = vim/bundle/vim-ruby-conque
+	url = git://github.com/skwp/vim-ruby-conque.git
