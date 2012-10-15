@@ -79,6 +79,7 @@ cmap cd. lcd %:p:h
 nnoremap <silent> <F8> :CtrlP<CR> 
 
 nnoremap <silent> <F6> :NERDTreeToggle<CR> 
+let NERDTreeQuitOnOpen=1
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
