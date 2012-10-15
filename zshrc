@@ -47,8 +47,5 @@ export PATH=$HOME/bin:/usr/local/bin:/local/node/bin:/usr/bin:/bin:/usr/sbin:/sb
 # pretty RI output
 export RI="--format ansi --width 70"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session as a function
-
-if [[ "$TERM" != "screen-256color" ]] then
-  tmux attach-session -t `whoami` || tmux new -s `whoami`
-fi
+# rvenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
