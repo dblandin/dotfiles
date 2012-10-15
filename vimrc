@@ -42,12 +42,21 @@ autocmd FileType java setlocal softtabstop=4 shiftwidth=4 expandtab
 " warn when file changes
 au CursorHold * checktime
 
-let mapleader=","
-let g:mapleader=","
+let mapleader=" "
+let g:mapleader=" "
 
-" restore original comma functionality by
-" mapping to backslash
-noremap \ ,
+" vim-ruby-conque commands
+nmap <silent> <Leader>rcrr :call RunRubyCurrentFileConque()<CR>
+nmap <silent> <Leader>rcss :call RunRspecCurrentFileConque()<CR>
+nmap <silent> <Leader>rcll :call RunRspecCurrentLineConque()<CR>
+nmap <silent> <Leader>rccc :call RunCucumberCurrentFileConque()<CR>
+nmap <silent> <Leader>rccl :call RunCucumberCurrentLineConque()<CR>
+nmap <silent> <Leader>rcRR :call RunRakeConque()<CR>
+nmap <silent> <Leader>rcrl :call RunLastConqueCommand()<CR>
+
+nnoremap <silent> <C-s> :call RelatedSpecVOpen()<CR>
+nnoremap <silent> ,<C-s> :call RelatedSpecOpen()<CR>
+
 
 " status line
 set statusline=%t 
@@ -76,7 +85,7 @@ cnoremap <C-E>      <End>
 
 cmap cd. lcd %:p:h
 
-nnoremap <silent> <F8> :CtrlP<CR> 
+nnoremap <silent> <leader>t :CtrlP<CR> 
 
 nnoremap <silent> <F6> :NERDTreeToggle<CR> 
 let NERDTreeQuitOnOpen=1
