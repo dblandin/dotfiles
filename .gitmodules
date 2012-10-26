@@ -67,3 +67,12 @@
 [submodule "vim/bundle/vim-ruby-conque"]
 	path = vim/bundle/vim-ruby-conque
 	url = git://github.com/skwp/vim-ruby-conque.git
+[submodule "vim/bundle/vim-ruby-run"]
+	path = vim/bundle/vim-ruby-run
+	url = git://github.com/stjernstrom/vim-ruby-run.git
+[submodule "vim/bundle/vim-matchit"]
+	path = vim/bundle/vim-matchit
+	url = git://github.com/tsaleh/vim-matchit.git
+[submodule "vimux"]
+	path = vim/bundle/vimux
+	url = https://github.com/benmills/vimux.git
