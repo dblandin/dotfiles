@@ -1,11 +1,29 @@
 [user]
-	name = Devon Blandin
-	email = dblandin@gmail.com
+  name = Devon Blandin
+  email = dblandin@gmail.com
 [core]
-	excludesfile = /Users/dblandin/.gitignore_global
+  excludesfile = /Users/dblandin/.gitignore_global
+  excludesfile = ~/.gitignore
 [github]
-	user = dblandin
+  user = dblandin
+[color]
+  ui = true
+  diff = auto
+  status = auto
+  branch = auto
+[merge]
+  tool = opendiff
 [alias]
-	co = checkout
-	br = branch
-	cm = commit
+  c    = commit -m
+  a    = add -A
+  aa   = !git add -A . && git status
+  up   = !git fetch origin && git rebase origin/master
+  ir   = !git rebase -i origin/master
+  cob  = checkout -b
+  mf   = merge --no-ff
+  st   = status -sb
+  rmb  = !sh -c 'git branch -D $1 && git push origin :$1' -
+  who  = shortlog -n -s --no-merges
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[format]
+  pretty = oneline
