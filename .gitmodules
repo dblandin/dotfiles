@@ -52,9 +52,6 @@
 [submodule "vim/bundle/mustache"]
 	path = vim/bundle/mustache
 	url = git://github.com/juvenn/mustache.vim.git
-[submodule "vim/bundle/evervim"]
-	path = vim/bundle/evervim
-	url = git://github.com/kakkyz81/evervim.git
 [submodule "vim/bundle/rename.vim"]
 	path = vim/bundle/rename.vim
 	url = git://github.com/danro/rename.vim.git
