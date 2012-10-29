@@ -69,6 +69,12 @@ filetype indent plugin on
 set ofu=syntaxcomplete#Complete
 autocmd FileType java setlocal softtabstop=4 shiftwidth=4 expandtab
 
+" completion
+"
+set wildmode=list:longest,list:full
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,ruby/*
+set complete=.,w,t
+
 " disable arrow keys
 noremap <Up> <Nop>
 noremap <Down> <Nop>
@@ -101,6 +107,9 @@ map <Leader>c :Ack<space>
 
 " status line
 set statusline=%t 
+
+" disable search highlighting
+nmap <silent> <leader>/ :nohl<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Speed up vim
@@ -159,7 +168,7 @@ cmap cd. lcd %:p:h
 nnoremap <silent> <leader>r :CtrlP<CR> 
 set wildignore+=*/.git/*,**/vendor/ruby/**,**/bin/*,**/tmp/*,*/.*
 
-map <leader>d :NERDTreeToggle \| :silent NERDTreeMirror<CR>
+map <leader>d :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen = 1
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeWinPos = "right"
@@ -182,6 +191,3 @@ let g:tagbar_autofocus = 1
 
 " Remove any trailing whitespace
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let
-@/=_s<Bar>:nohl<CR>
-
-
