@@ -43,9 +43,6 @@
 [submodule "vim/bundle/gundo.vim"]
 	path = vim/bundle/gundo.vim
 	url = git://github.com/sjl/gundo.vim.git
-[submodule "vim/bundle/vim-powerline"]
-	path = vim/bundle/vim-powerline
-	url = git://github.com/Lokaltog/vim-powerline.git
 [submodule "tmux/tmux-colors-solarized"]
 	path = tmux/tmux-colors-solarized
 	url = git://github.com/seebi/tmux-colors-solarized.git
