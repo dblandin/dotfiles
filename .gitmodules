@@ -28,9 +28,6 @@
 [submodule "vim/bundle/vim-rails"]
 	path = vim/bundle/vim-rails
 	url = git://github.com/tpope/vim-rails.git
-[submodule "vim/bundle/vim-rvm"]
-	path = vim/bundle/vim-rvm
-	url = git://github.com/tpope/vim-rvm.git
 [submodule "vim/bundle/vim-rake"]
 	path = vim/bundle/vim-rake
 	url = git://github.com/tpope/vim-rake.git
@@ -73,6 +70,6 @@
 [submodule "vim/bundle/vim-matchit"]
 	path = vim/bundle/vim-matchit
 	url = git://github.com/tsaleh/vim-matchit.git
-[submodule "vimux"]
+[submodule "vim/bundle/vimux"]
 	path = vim/bundle/vimux
-	url = https://github.com/benmills/vimux.git
+	url = git://github.com/benmills/vimux.git
