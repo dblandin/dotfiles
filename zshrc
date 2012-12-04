@@ -24,7 +24,7 @@ DISABLE_AUTO_TITLE="true" # was also messing up tmux window titles
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew gem cloudapp git-flow github rails3 autojump)
+plugins=(bundler, gem, osx, rails3)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.plugins/*.zsh
@@ -35,6 +35,8 @@ source $HOME/.plugins/*.zsh
 alias pear="php /usr/lib/php/pear/pearcmd.php" 
 alias pecl="php /usr/lib/php/pear/peclcmd.php" 
 
+alias rspec="bundle exec rspec"
+
 # tmuxinator and teamocil
 export EDITOR=vim
 export SHELL=/bin/zsh
@@ -42,7 +44,7 @@ compctl -g '$HOME/.teamocil/*(:t:r)' teamocil
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator && source $HOME/.tmuxinator/scripts/tmuxinator_completion
 
 # PATH config
-export PATH=$HOME/bin:/usr/local/bin:/local/node/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/sbin:/usr/local/share/python:~/bin
+export PATH=$HOME/bin:/usr/local/bin:/local/node/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/sbin:/usr/local/share/python:~/bin:/usr/local/texlive/2012/bin/universal-darwin
 
 # pretty RI output
 export RI="--format ansi --width 70"
