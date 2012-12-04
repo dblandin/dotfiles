@@ -9,6 +9,8 @@ set nocompatible | syn on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype off " required for vundle!
 
+" git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+" :BundleInstall
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
