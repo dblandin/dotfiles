@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-export ZSH_THEME="cloud"
+export ZSH_THEME="miloshadzic"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -36,6 +36,8 @@ alias pear="php /usr/lib/php/pear/pearcmd.php"
 alias pecl="php /usr/lib/php/pear/peclcmd.php" 
 
 alias rspec="bundle exec rspec"
+alias ll='ls -lh'
+alias lll='ls -lah'
 
 # tmuxinator and teamocil
 export EDITOR=vim
@@ -48,6 +50,16 @@ export PATH=$HOME/bin:/usr/local/bin:/local/node/bin:/usr/bin:/bin:/usr/sbin:/sb
 
 # pretty RI output
 export RI="--format ansi --width 70"
+
+# CD config
+export CDPATH=:..:~:~/Dropbox/code
+
+# pretty RI output
+export RI="--format ansi --width 70"
+
+psman()
+{
+man -t "${1}" | open -f -a /Applications/Preview.app/ }
 
 # rvenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
