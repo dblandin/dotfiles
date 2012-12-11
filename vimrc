@@ -16,6 +16,9 @@ call vundle#rc()
 
 Bundle 'MarcWeber/vim-addon-mw-utils'
 
+" dependencies
+Bundle 'vim-scripts/tlib'
+
 " navigation
 Bundle 'tpope/vim-rails'
 Bundle 'godlygeek/tabular'

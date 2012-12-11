@@ -52,7 +52,7 @@ export PATH=$HOME/bin:/usr/local/bin:/local/node/bin:/usr/bin:/bin:/usr/sbin:/sb
 export RI="--format ansi --width 70"
 
 # CD config
-export CDPATH=:..:~:~/Dropbox/code
+export CDPATH=:..:~:~/code
 
 # pretty RI output
 export RI="--format ansi --width 70"
