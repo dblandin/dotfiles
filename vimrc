@@ -24,6 +24,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'godlygeek/tabular'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
+Bundle 'mileszs/ack.vim'
 
 " utilities
 Bundle 'sjl/gundo.vim'
