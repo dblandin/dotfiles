@@ -31,6 +31,11 @@ source $HOME/.plugins/*.zsh
 
 # Customize to your needs...
 
+# vim key bindings
+set -o vi
+
+. .zsh/aliases
+
 # PHP modules
 alias pear="php /usr/lib/php/pear/pearcmd.php"
 alias pecl="php /usr/lib/php/pear/peclcmd.php"

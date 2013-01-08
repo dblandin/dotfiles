@@ -46,24 +46,13 @@ Bundle 'vim-coffee-script'
 filetype indent plugin on
 
 " CtrlP
-nnoremap <silent> <leader>r :CtrlP<CR>
 set wildignore+=*/.git/*,**/vendor/ruby/**,**/bin/*,**/tmp/*,*/.*
 
-" Tabularize
-nmap <Leader>a= :Tab /=<CR>
-vmap <Leader>a= :Tab /=<CR>
-nmap <Leader>a> :Tab /=><CR>
-vmap <Leader>a> :Tab /=><CR>
-nmap <Leader>a: :Tab /:\zs<CR>
-vmap <Leader>a: :Tab /:\zs<CR>
-
 " NERDTree
-map <leader>d :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 let NERDTreeQuitOnOpen = 1
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeWinPos = "right"
 
-nnoremap <silent> <leader>y :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -74,7 +63,7 @@ set history=50
 set ruler
 syntax on
 
-" solarized options 
+" solarized options
 let g:solarized_termcolors = 256
 set background=dark
 colorscheme solarized
@@ -137,12 +126,6 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
-" disable arrow keys
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Intuitive backspacing in insert mode
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -155,20 +138,11 @@ set backspace=indent,eol,start
 let mapleader=" "
 let g:mapleader=" "
 
-" vim-ruby-conque commands
-nmap <silent> <Leader>rcrr :call RunRubyCurrentFileConque()<CR>
-nmap <silent> <Leader>rcss :call RunRspecCurrentFileConque()<CR>
-nmap <silent> <Leader>rccc :call RunCucumberCurrentFileConque()<CR>
-nmap <silent> <Leader>rcRR :call RunRakeConque()<CR>
-
 map <Leader>p <C-^> " Go to previous file
 map <Leader>n <C-^> " Go to next file
 
 " Ack
 map <Leader>c :Ack<space>
-
-" status line
-set statusline=%t 
 
 " disable search highlighting
 nmap <silent> <leader>/ :nohl<CR>
@@ -217,39 +191,16 @@ set undolevels=1000
 " Toggle Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Toggle Pasting
-:set pastetoggle=<F2>
+set pastetoggle=<F2>
 
 " Toggle Highlighting
-:nnoremap <silent> <F3> :nohl<CR>
+nnoremap <silent> <F3> :nohl<CR>
 
 " Toggle Spelling
-:map <F4> :setlocal spell! spelllang=en_us<CR>
+map <F4> :setlocal spell! spelllang=en_us<CR>
 
 " Remove any trailing whitespace
-:nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Shortcuts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
-nmap <C-H> <C-W>h<C-W><bar>
-nmap <C-L> <C-W>l<C-W><bar>
-
-map <S-H> gT " tab back
-map <S-L> gt " tab forward
-
-map <C-t><C-t> :tabnew<CR> " open new tab
-map <C-t><C-w> :tabclose<CR> " close tab
-
-
-nmap <leader>/ :nohl<CR> " disable search highlight
-
-cnoremap <C-A>      <Home>
-cnoremap <C-E>      <End>
-
-" set working directory to location of current file
-cmap cd. lcd %:p:h
+nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Status bar
@@ -268,16 +219,16 @@ set statusline+=%<%P           " file position
 " Toggle Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Toggle Pasting
-:set pastetoggle=<F2>
+set pastetoggle=<F2>
 
 " Toggle Highlighting
-:nnoremap <silent> <F3> :nohl<CR>
+nnoremap <silent> <F3> :nohl<CR>
 
 " Toggle Spelling
-:map <F4> :setlocal spell! spelllang=en_us<CR>
+map <F4> :setlocal spell! spelllang=en_us<CR>
 
 " Remove any trailing whitespace
-:nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let
+nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Testing functions borrowed from Gary Berhardt
@@ -361,3 +312,36 @@ function! RunTests(filename)
         end
     end
 endfunction
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Key Bindings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <silent> <leader>y :TagbarToggle<CR>
+map <leader>d :NERDTreeToggle \| :silent NERDTreeMirror<CR>
+nnoremap <silent> <leader>r :CtrlP<CR>
+
+" Tabularize
+nmap <Leader>a= :Tab /=<CR>
+vmap <Leader>a= :Tab /=<CR>
+nmap <Leader>a> :Tab /=><CR>
+vmap <Leader>a> :Tab /=><CR>
+nmap <Leader>a: :Tab /:\zs<CR>
+vmap <Leader>a: :Tab /:\zs<CR>
+
+" disable arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+" shortcuts
+map <C-J> <C-W>j<C-W>_
+map <C-K> <C-W>k<C-W>_
+nmap <C-H> <C-W>h<C-W><bar>
+nmap <C-L> <C-W>l<C-W><bar>
+
+map <S-H> gT " tab back
+map <S-L> gt " tab forward
+
+map <C-t><C-t> :tabnew<CR> " open new tab
+map <C-t><C-w> :tabclose<CR> " close tab
