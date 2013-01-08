@@ -7,7 +7,7 @@
 [github]
   user = dblandin
 [color]
-  ui = true
+  ui = always
   diff = auto
   status = auto
   branch = auto
