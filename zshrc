@@ -32,8 +32,8 @@ source $HOME/.plugins/*.zsh
 # Customize to your needs...
 
 # PHP modules
-alias pear="php /usr/lib/php/pear/pearcmd.php" 
-alias pecl="php /usr/lib/php/pear/peclcmd.php" 
+alias pear="php /usr/lib/php/pear/pearcmd.php"
+alias pecl="php /usr/lib/php/pear/peclcmd.php"
 
 alias rspec="bundle exec rspec"
 alias ll='ls -lh'
@@ -60,6 +60,14 @@ export RI="--format ansi --width 70"
 psman()
 {
 man -t "${1}" | open -f -a /Applications/Preview.app/ }
+
+tilde_or_pwd() {
+  echo $PWD | sed -e "s/\/Users\/$USER/~/"
+}
+
+export PROMPT=$'%{$fg[cyan]%}%1~%{$reset_color%}%{$fg[red]%}
+%{\e[0;%(?.32.31)m%}>%{\e[0m%} '
+export RPROMPT=$'%{\e[0;90m%}$(tilde_or_pwd)$(git_cwd_info)%{\e[0m%}'
 
 # rvenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
