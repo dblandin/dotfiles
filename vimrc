@@ -43,7 +43,28 @@ Bundle 'scrooloose/snipmate-snippets'
 " syntax
 Bundle 'vim-coffee-script'
 
-filetype indent plugin on 
+filetype indent plugin on
+
+" CtrlP
+nnoremap <silent> <leader>r :CtrlP<CR>
+set wildignore+=*/.git/*,**/vendor/ruby/**,**/bin/*,**/tmp/*,*/.*
+
+" Tabularize
+nmap <Leader>a= :Tab /=<CR>
+vmap <Leader>a= :Tab /=<CR>
+nmap <Leader>a> :Tab /=><CR>
+vmap <Leader>a> :Tab /=><CR>
+nmap <Leader>a: :Tab /:\zs<CR>
+vmap <Leader>a: :Tab /:\zs<CR>
+
+" NERDTree
+map <leader>d :NERDTreeToggle \| :silent NERDTreeMirror<CR>
+let NERDTreeQuitOnOpen = 1
+let NERDTreeCaseSensitiveSort = 1
+let NERDTreeWinPos = "right"
+
+nnoremap <silent> <leader>y :TagbarToggle<CR>
+let g:tagbar_autofocus = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance
@@ -174,6 +195,16 @@ set nowritebackup
 set backupdir=~/.vim/tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim/tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Whitespace Highlighting && Deletion
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Undo buffers
@@ -182,6 +213,20 @@ set directory=~/.vim/tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set history=1000
 set undolevels=1000
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Toggle Functions
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Toggle Pasting
+:set pastetoggle=<F2>
+
+" Toggle Highlighting
+:nnoremap <silent> <F3> :nohl<CR>
+
+" Toggle Spelling
+:map <F4> :setlocal spell! spelllang=en_us<CR>
+
+" Remove any trailing whitespace
+:nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Shortcuts
@@ -206,17 +251,18 @@ cnoremap <C-E>      <End>
 " set working directory to location of current file
 cmap cd. lcd %:p:h
 
-nnoremap <silent> <leader>r :CtrlP<CR> 
-set wildignore+=*/.git/*,**/vendor/ruby/**,**/bin/*,**/tmp/*,*/.*
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Status bar
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-map <leader>d :NERDTreeToggle<CR>
-let NERDTreeQuitOnOpen = 1
-let NERDTreeCaseSensitiveSort = 1
-let NERDTreeWinPos = "right"
-
-nnoremap <silent> <leader>y :TagbarToggle<CR> 
-
-let g:tagbar_autofocus = 1
+set laststatus=2               " always show statusbar
+set statusline=
+set statusline+=%-10.3n\       " buffer number
+set statusline+=%f\            " filename
+set statusline+=%h%m%r%w       " status flags
+set statusline+=%=             " right align remainder
+set statusline+=%-14(%l,%c%V%) " line, character
+set statusline+=%<%P           " file position
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Toggle Functions
@@ -232,8 +278,6 @@ let g:tagbar_autofocus = 1
 
 " Remove any trailing whitespace
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let
-
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Testing functions borrowed from Gary Berhardt
