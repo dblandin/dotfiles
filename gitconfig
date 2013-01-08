@@ -11,6 +11,8 @@
   diff = auto
   status = auto
   branch = auto
+[apply]
+  whitespace = warn
 [merge]
   tool = opendiff
 [alias]
