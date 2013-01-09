@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-export ZSH_THEME="miloshadzic"
+export ZSH_THEME="nicoulaj"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -24,7 +24,7 @@ DISABLE_AUTO_TITLE="true" # was also messing up tmux window titles
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bundler, gem, osx, rails3)
+plugins=()
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.plugins/*.zsh
@@ -34,7 +34,11 @@ source $HOME/.plugins/*.zsh
 # vim key bindings
 set -o vi
 
-. .zsh/aliases
+tilde_or_pwd() {
+  echo $PWD | sed -e "s/\/Users\/$USER/~/"
+}
+
+. $HOME/code/dotfiles/zsh/aliases
 
 # PHP modules
 alias pear="php /usr/lib/php/pear/pearcmd.php"
@@ -51,7 +55,7 @@ compctl -g '$HOME/.teamocil/*(:t:r)' teamocil
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator && source $HOME/.tmuxinator/scripts/tmuxinator_completion
 
 # PATH config
-export PATH=$HOME/bin:/usr/local/bin:/local/node/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/sbin:/usr/local/share/python:~/bin:/usr/local/texlive/2012/bin/universal-darwin
+export PATH=$HOME/bin:/usr/local/opt/rbenv/shims:/usr/local/bin:/local/node/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/sbin:/usr/local/share/python:~/bin:/usr/local/texlive/2012/bin/universal-darwin:$PATH
 
 # pretty RI output
 export RI="--format ansi --width 70"
@@ -62,17 +66,15 @@ export CDPATH=:..:~:~/code
 # pretty RI output
 export RI="--format ansi --width 70"
 
-psman()
-{
-man -t "${1}" | open -f -a /Applications/Preview.app/ }
-
-tilde_or_pwd() {
-  echo $PWD | sed -e "s/\/Users\/$USER/~/"
-}
-
-export PROMPT=$'%{$fg[cyan]%}%1~%{$reset_color%}%{$fg[red]%}
-%{\e[0;%(?.32.31)m%}>%{\e[0m%} '
-export RPROMPT=$'%{\e[0;90m%}$(tilde_or_pwd)$(git_cwd_info)%{\e[0m%}'
+psman() { man -t "${1}" | open -f -a /Applications/Preview.app/ }
 
 # rvenv
+export RBENV_ROOT=/usr/local/opt/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+export RBENV_VERSION=1.9.3-p327-perf
+
+# ruby tuning
+export RUBY_GC_MALLOC_LIMIT=1000000000
+export RUBY_FREE_MIN=500000
+export RUBY_HEAP_MIN_SLOTS=40000
+

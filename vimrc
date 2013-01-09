@@ -303,7 +303,7 @@ function! RunTests(filename)
     :w
 
     if match(a:filename, '\.feature$') != -1
-        exec ":!script/features " . a:filename
+        exec ":!cucumber -r features " . a:filename
     else
         if filereadable("script/test")
             exec ":!script/test " . a:filename
