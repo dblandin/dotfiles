@@ -3,6 +3,17 @@ alias r='bundle exec rake'
 
 alias rks='rake konacha:serve'
 
+# tmux
+
+alias ta='tmux attach'
+alias tn='tmux new -s'
+alias tl='tmux ls'
+alias tsn='tmux -S /tmp/pair new -s'
+alias tsa='tmux -S /tmp/pair attach'
+alias tsl='tmux -S /tmp/pair ls'
+
+# git
+
 alias s='git status -sb $argv; return 0'
 alias d='gd $argv'
 
