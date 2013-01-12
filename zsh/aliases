@@ -1,5 +1,6 @@
 alias b='bundle exec'
 alias r='bundle exec rake'
+alias rr='rake routes'
 
 alias rks='rake konacha:serve'
 

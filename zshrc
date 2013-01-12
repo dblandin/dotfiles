@@ -73,6 +73,9 @@ export RBENV_ROOT=/usr/local/opt/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export RBENV_VERSION=1.9.3-p327-perf
 
+# pg gem
+export ARCHFLAGS="-arch x86_64"
+
 # ruby tuning
 export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_FREE_MIN=500000
