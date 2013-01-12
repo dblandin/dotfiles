@@ -6,6 +6,7 @@ alias fr='foreman run'
 alias frrc='foreman run rails console'
 
 alias rks='rake konacha:serve'
+alias rdbm='rake db:migrate'
 
 # tmux
 
@@ -97,6 +98,8 @@ alias gs='git show'
 alias gs.='git show --color-words="."'
 alias gst='git stash'
 alias gstp='git stash pop'
+alias gstl='git stash list'
+alias gstc='git stash clear'
 alias gup='git smart-pull'
 gupstation() {
   gup

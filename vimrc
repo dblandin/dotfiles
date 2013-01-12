@@ -63,6 +63,8 @@ set history=50
 set ruler
 syntax on
 
+au BufNewFile,BufRead *.hamlbars setf haml
+
 " solarized options
 let g:solarized_termcolors = 256
 set background=dark
