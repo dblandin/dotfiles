@@ -1,6 +1,9 @@
 alias b='bundle exec'
 alias r='bundle exec rake'
 alias rr='rake routes'
+alias fs='foreman start'
+alias fr='foreman run'
+alias frrc='foreman run rails console'
 
 alias rks='rake konacha:serve'
 
