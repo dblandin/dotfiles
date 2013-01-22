@@ -51,6 +51,10 @@ alias lll='ls -lah'
 # tmuxinator and teamocil
 export EDITOR=vim
 export SHELL=/bin/zsh
+export PLATFORM="mac"
+export USE_PATCHED_FONT="true"
+export DEBUG_MODE="false"
+
 compctl -g '$HOME/.teamocil/*(:t:r)' teamocil
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator && source $HOME/.tmuxinator/scripts/tmuxinator_completion
 
@@ -67,6 +71,7 @@ export CDPATH=:..:~:~/code
 export RI="--format ansi --width 70"
 
 psman() { man -t "${1}" | open -f -a /Applications/Preview.app/ }
+PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#I_#P") "$PWD")'
 
 # rvenv
 export RBENV_ROOT=/usr/local/opt/rbenv
