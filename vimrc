@@ -140,9 +140,6 @@ set backspace=indent,eol,start
 let mapleader=" "
 let g:mapleader=" "
 
-map <Leader>p <C-^> " Go to previous file
-map <Leader>n <C-^> " Go to next file
-
 " Ack
 map <Leader>c :Ack<space>
 
@@ -370,5 +367,5 @@ function! DoWindowSwap()
     exe 'hide buf' markedBuf
 endfunction
 
-nmap <silent> <leader>mw :call MarkWindowSwap()<CR> " mark window
-nmap <silent> <leader>dw :call DoWindowSwap()<CR> " drop window
+nmap <silent> <leader>lw :call MarkWindowSwap()<CR> " lift window
+nmap <silent> <leader>pw :call DoWindowSwap()<CR> " place window
