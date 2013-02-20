@@ -42,6 +42,7 @@ Bundle 'scrooloose/snipmate-snippets'
 
 " syntax
 Bundle 'vim-coffee-script'
+Bundle 'davidoc/taskpaper.vim'
 
 filetype indent plugin on
 
@@ -369,3 +370,11 @@ endfunction
 
 nmap <silent> <leader>lw :call MarkWindowSwap()<CR> " lift window
 nmap <silent> <leader>pw :call DoWindowSwap()<CR> " place window
+
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
