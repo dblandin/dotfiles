@@ -59,7 +59,7 @@ compctl -g '$HOME/.teamocil/*(:t:r)' teamocil
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator && source $HOME/.tmuxinator/scripts/tmuxinator_completion
 
 # PATH config
-export PATH=$HOME/bin:/usr/local/opt/rbenv/shims:/usr/local/bin:/local/node/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/sbin:/usr/local/share/python:~/bin:/usr/local/texlive/2012/bin/universal-darwin:$PATH
+export PATH=$HOME/bin:/usr/local/share/npm/bin:/usr/local/opt/rbenv/shims:/usr/local/bin:/local/node/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/sbin:/usr/local/share/python:~/bin:/usr/local/texlive/2012/bin/universal-darwin:$PATH
 
 # pretty RI output
 export RI="--format ansi --width 70"
