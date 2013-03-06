@@ -59,7 +59,7 @@ compctl -g '$HOME/.teamocil/*(:t:r)' teamocil
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator && source $HOME/.tmuxinator/scripts/tmuxinator_completion
 
 # PATH config
-export PATH=$HOME/bin:/usr/local/share/npm/bin:/usr/local/opt/rbenv/shims:/usr/local/bin:/local/node/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/sbin:/usr/local/share/python:~/bin:/usr/local/texlive/2012/bin/universal-darwin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/local/opt/rbenv/shims:/local/node/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/sbin:/usr/local/share/python:~/bin:/usr/local/texlive/2012/bin/universal-darwin:$PATH
 
 # pretty RI output
 export RI="--format ansi --width 70"
@@ -76,7 +76,6 @@ PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#I_#P") "$
 # rvenv
 export RBENV_ROOT=/usr/local/opt/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-export RBENV_VERSION=1.9.3-p327-perf
 
 # pg gem
 export ARCHFLAGS="-arch x86_64"
@@ -86,3 +85,5 @@ export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_FREE_MIN=500000
 export RUBY_HEAP_MIN_SLOTS=40000
 
+# disable autocorrect
+setopt nocorrectall; setopt correct
