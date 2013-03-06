@@ -28,8 +28,8 @@ Bundle 'mileszs/ack.vim'
 
 " utilities
 Bundle 'sjl/gundo.vim'
-Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-eunuch'
 
 " insert/visual mode
 Bundle 'tpope/vim-surround'
@@ -100,9 +100,6 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 " Search
 set hlsearch
 set incsearch
-
-" Clipboard
-set clipboard=unnamed
 
 " Indentation
 set softtabstop=2 shiftwidth=2 expandtab
