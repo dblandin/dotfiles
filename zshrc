@@ -34,6 +34,14 @@ source $HOME/.plugins/*.zsh
 # vim key bindings
 set -o vi
 
+bindkey '^k' vi-cmd-mode # <C-k> for going to command mode
+bindkey -M vicmd ' ' execute-named-cmd # Space for command line mode
+bindkey '^[[A' up-line-or-search
+bindkey '^[[B' down-line-or-search
+bindkey -M vicmd '?' history-incremental-search-backward
+bindkey '^p' history-substring-search-up
+bindkey '^n' history-substring-search-down
+
 tilde_or_pwd() {
   echo $PWD | sed -e "s/\/Users\/$USER/~/"
 }
