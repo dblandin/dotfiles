@@ -214,21 +214,6 @@ set statusline+=%-14(%l,%c%V%) " line, character
 set statusline+=%<%P           " file position
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Toggle Functions
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Toggle Pasting
-set pastetoggle=<F2>
-
-" Toggle Highlighting
-nnoremap <silent> <F3> :nohl<CR>
-
-" Toggle Spelling
-map <F4> :setlocal spell! spelllang=en_us<CR>
-
-" Remove any trailing whitespace
-nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Testing functions borrowed from Gary Berhardt
 " [github.com/garybernhardt/dotfiles/blob/master/.vimrc]
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -266,8 +251,8 @@ nnoremap <leader>. :call OpenTestAlternate()<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Running Tests
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>t :call RunTestFile()<cr>
-map <leader>T :call RunNearestTest()<cr>
+map <leader>T :w\|:silent !tmux send-keys -t dscout.2 'rspec %' C-m <CR>\|:redraw!<CR>
+map <leader>t :w\|:silent !tmux send-keys -t dscout.2 'rspec -t focus' C-m <CR>\|:redraw!<CR>
 
 function! RunTestFile(...)
     if a:0
