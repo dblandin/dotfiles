@@ -47,9 +47,6 @@ Bundle 'tpope/vim-markdown'
 
 filetype indent plugin on
 
-" CtrlP
-set wildignore+=*/.git/*,**/vendor/ruby/**,**/bin/*,**/tmp/*,*/.*
-
 " NERDTree
 let NERDTreeQuitOnOpen = 1
 let NERDTreeCaseSensitiveSort = 1
@@ -111,8 +108,10 @@ autocmd FileType java setlocal softtabstop=4 shiftwidth=4 expandtab
 
 " completion
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,ruby/*
+set wildignore+=*/.git/*,**/vendor/ruby/**,**/bin/*,**/tmp/*,*/.*,*.o,*.obj,.git,*.rbc,*.class,ruby/*
 set complete=.,w,t
+
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor'
 
 " remap the tab key to do autocompletion or indentation depending on the
 " context (from http://www.vim.org/tips/tip.php?tip_id=102)
