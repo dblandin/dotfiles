@@ -46,6 +46,7 @@ Bundle 'scrooloose/snipmate-snippets'
 Bundle 'vim-coffee-script'
 Bundle 'davidoc/taskpaper.vim'
 Bundle 'tpope/vim-markdown'
+Bundle 'vim-ruby/vim-ruby'
 
 filetype indent plugin on
 
