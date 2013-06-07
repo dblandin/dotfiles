@@ -57,6 +57,30 @@ let NERDTreeWinPos = "right"
 
 let g:tagbar_autofocus = 1
 
+" Dash
+"
+let g:dash_map = {
+  \ 'ruby'       : 'rubymotion',
+\ }
+
+nmap <silent> <leader>f <Plug>DashGlobalSearch
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Leader Commands
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader=" "
+let g:mapleader=" "
+
+map <Leader>c :Ack<space>
+map <Leader>cn :e ~/Dropbox/notes/coding-notes.txt<cr>
+map <Leader>vi :tabe ~/.vimrc<CR>
+map <leader>/ :nohl<CR>
+
+map  <C-s> <esc>:w<CR>
+imap <C-s> <esc>:w<CR>
+map  <C-t> <esc>:tabnew<CR>
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -134,18 +158,6 @@ inoremap <s-tab> <c-n>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set backspace=indent,eol,start
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Leader
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader=" "
-let g:mapleader=" "
-
-" Ack
-map <Leader>c :Ack<space>
-
-" disable search highlighting
-nmap <silent> <leader>/ :nohl<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Speed up vim
