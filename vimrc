@@ -41,6 +41,7 @@ Bundle 'ervandew/supertab'
 " snippets
 Bundle 'garbas/vim-snipmate'
 Bundle 'scrooloose/snipmate-snippets'
+Bundle 'rcyrus/snipmate-snippets-rubymotion'
 
 " syntax
 Bundle 'vim-coffee-script'
