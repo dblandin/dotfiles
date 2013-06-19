@@ -5,6 +5,8 @@ alias fs='foreman start'
 alias fr='foreman run'
 alias frrc='foreman run rails console'
 
+tc () { history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head }
+
 alias rks='rake konacha:serve'
 alias rdbm='rake db:migrate'
 
@@ -13,9 +15,9 @@ alias rdbm='rake db:migrate'
 alias ta='tmux attach'
 alias tn='tmux new -s'
 alias tl='tmux ls'
-alias tsn='tmux -S /tmp/pair new -s'
-alias tsa='tmux -S /tmp/pair attach'
-alias tsl='tmux -S /tmp/pair ls'
+alias tpn='tmux -S /tmp/pair new -s'
+alias tpa='tmux -S /tmp/pair attach'
+alias tpl='tmux -S /tmp/pair ls'
 
 # git
 
