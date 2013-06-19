@@ -1,0 +1,2 @@
+" Leader Commands
+nnoremap <Leader>: :%s/:\([^ ]*\)\(\s*\)=>/\1:/gc<CR> " :hash => to hash:
