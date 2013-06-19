@@ -4,7 +4,6 @@ alias rr='rake routes'
 alias fs='foreman start'
 alias fr='foreman run'
 alias frrc='foreman run rails console'
-alias rr='rake routes'
 
 alias rks='rake konacha:serve'
 alias rdbm='rake db:migrate'
