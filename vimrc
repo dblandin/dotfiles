@@ -76,6 +76,7 @@ map <Leader>c :Ack<space>
 map <Leader>cn :e ~/Dropbox/notes/coding-notes.txt<cr>
 map <Leader>vi :tabe ~/.vimrc<CR>
 map <leader>/ :nohl<CR>
+map <leader>p Orequire 'pry'; binding.pry<ESC>j
 
 map  <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
