@@ -341,31 +341,6 @@ map <S-L> gt " tab forward
 map <C-t><C-t> :tabnew<CR> " open new tab
 map <C-t><C-w> :tabclose<CR> " close tab
 
-" Split Swap
-" http://stackoverflow.com/questions/2586984/how-can-i-swap-positions-of-two-open-files-in-splits-in-vim
-
-function! MarkWindowSwap()
-    let g:markedWinNum = winnr()
-endfunction
-
-function! DoWindowSwap()
-    "Mark destination
-    let curNum = winnr()
-    let curBuf = bufnr( "%" )
-    exe g:markedWinNum . "wincmd w"
-    "Switch to source and shuffle dest->source
-    let markedBuf = bufnr( "%" )
-    "Hide and open so that we aren't prompted and keep history
-    exe 'hide buf' curBuf
-    "Switch to dest and shuffle source->dest
-    exe curNum . "wincmd w"
-    "Hide and open so that we aren't prompted and keep history
-    exe 'hide buf' markedBuf
-endfunction
-
-nmap <silent> <leader>lw :call MarkWindowSwap()<CR> " lift window
-nmap <silent> <leader>pw :call DoWindowSwap()<CR> " place window
-
 if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
   let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
