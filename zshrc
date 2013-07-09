@@ -1,3 +1,4 @@
+ZSH=$HOME/.oh-my-zsh
 # -------------------------------------
 # oh-my-zsh configuration
 # -------------------------------------
@@ -12,9 +13,8 @@ DISABLE_AUTO_TITLE='true' # was also messing up tmux window titles
 # oh-my-zsh plugins (~/.oh-my-zsh/plugins/)
 plugins=()
 
-# source oh-my-zsh and plugins
-source $HOME/.oh-my-zsh/oh-my-zsh.sh
-source $HOME/.plugins/*.zsh
+# source oh-my-zsh
+source $ZSH//oh-my-zsh.sh
 
 # -------------------------------------
 # Source additional zsh configuration files
