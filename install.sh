@@ -15,7 +15,7 @@ fi
 # check if Git is installed
 which -s git || brew install git
 
-mkdir -p $HOME/tmp/swap 
+mkdir -p $HOME/tmp/swap
 mkdir -p $HOME/tmp/backup
 
 cutstring="DO NOT EDIT BELOW THIS LINE"

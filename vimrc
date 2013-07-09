@@ -91,9 +91,7 @@ syntax on
 au BufNewFile,BufRead *.hamlbars setf haml
 
 " solarized options
-let g:solarized_termcolors = 256
-set background=dark
-colorscheme solarized
+colorscheme Tomorrow-Night
 
 " fix xterm colors
 if &term =~ "xterm"
