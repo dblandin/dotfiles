@@ -1,14 +1,19 @@
+# ruby
+
 alias b='bundle exec'
 alias r='bundle exec rake'
 alias rr='rake routes'
 alias fs='foreman start'
 alias fr='foreman run'
 alias frrc='foreman run rails console'
-
-tc () { history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head }
-
+alias rspec="bundle exec rspec"
 alias rks='rake konacha:serve'
 alias rdbm='rake db:migrate; rake test:prepare'
+
+# listing files
+
+alias l='ls -lh'
+alias ll='ls -lah'
 
 # tmux
 
@@ -31,11 +36,6 @@ else
   alias ls='ls --color=auto'
   alias du='du -k --max-depth=1 $argv'
 fi
-
-alias l='ls'
-alias ll='ls -lh'
-alias la='ls -a'
-alias lal='ls -lah'
 
 alias ga='git add -A'
 alias gap='ga -p'

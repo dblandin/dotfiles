@@ -1,0 +1,9 @@
+top_commands () {
+  history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head
+}
+
+list_colors() {
+  for i in {0..255} ; do
+     printf "\x1b[38;5;${i}mcolour${i}\n"
+  done
+}
