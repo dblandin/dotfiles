@@ -77,11 +77,8 @@ map <Leader>cn :e ~/Dropbox/notes/coding-notes.txt<cr>
 map <Leader>vi :tabe ~/.vimrc<CR>
 map <leader>/ :nohl<CR>
 map <leader>p Orequire 'pry'; binding.pry<ESC>j
-
-map  <C-s> <esc>:w<CR>
-imap <C-s> <esc>:w<CR>
-map  <C-t> <esc>:tabnew<CR>
-
+vnoremap <leader>h :s/:\(\w*\) *=>/\1:/g<cr> " kill all hash rockets
+map <leader>m :!open -a Marked %<cr><cr> " Markdown preview
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance
