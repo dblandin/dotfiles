@@ -11,7 +11,7 @@ export ZSH_THEME="nicoulaj"
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
@@ -95,3 +95,9 @@ export RUBY_HEAP_MIN_SLOTS=40000
 
 # disable autocorrect
 setopt nocorrectall; setopt correct
+
+if which tmux 2>&1 >/dev/null; then
+  if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
+    tmux attach -t $(whoami) || tmux new -s $(whoami); exit
+  fi
+fi
