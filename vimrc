@@ -72,13 +72,20 @@ nmap <silent> <leader>f <Plug>DashGlobalSearch
 let mapleader=" "
 let g:mapleader=" "
 
-map <Leader>c :Ack<space>
-map <Leader>cn :e ~/Dropbox/notes/coding-notes.txt<cr>
-map <Leader>vi :tabe ~/.vimrc<CR>
-map <leader>/ :nohl<CR>
-map <leader>p Orequire 'pry'; binding.pry<ESC>j
+map      <leader>c :Ack<space>
+map      <leader>n :sp ~/Dropbox/notes/coding-notes.txt<cr>
+map      <leader>vi :tabe ~/.vimrc<CR>
+map      <leader>/ :nohl<CR>
+map      <leader>pr orequire 'pry'; binding.pry<ESC>:w<CR>
 vnoremap <leader>h :s/:\(\w*\) *=>/\1:/g<cr> " kill all hash rockets
-map <leader>m :!open -a Marked %<cr><cr> " Markdown preview
+map      <leader>m :!open -a Marked %<cr><cr> " Markdown preview
+nmap     <leader>a= :Tab /=<CR>
+vmap     <leader>a= :Tab /=<CR>
+nmap     <leader>a: :Tab /:\zs<CR>
+vmap     <leader>a: :Tab /:\zs<CR>
+nnoremap <leader>. :call OpenTestAlternate()<cr>
+map      <leader>t :call RunTestFile()<cr>
+map      <leader>T :w\|:silent !tmux send-keys -t bottom 'rspec -f d -t focus' C-m <CR>\|:redraw!<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance
@@ -166,8 +173,13 @@ set timeoutlen=50
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Change cursor shape between modes (iTerm)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Backup Preferences
@@ -257,13 +269,10 @@ function! AlternateForCurrentFile()
   endif
   return new_file
 endfunction
-nnoremap <leader>. :call OpenTestAlternate()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Running Tests
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>t :call RunTestFile()<cr>
-map <leader>T :w\|:silent !tmux send-keys -t bottom 'rspec -f d -t focus' C-m <CR>\|:redraw!<CR>
 
 function! RunTestFile(...)
   if a:0
