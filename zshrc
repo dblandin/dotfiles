@@ -45,9 +45,10 @@ setopt nocorrectall; setopt correct # disable autocorrect
 # environment variables
 # -------------------------------------
 
-export PATH=$PATH
 export EDITOR=vim
 export SHELL=/bin/zsh
+
+export PATH=/Applications/Postgres.app/Contents/MacOS/bin/:$PATH
 
 # -------------------------------------
 # rbenv config
