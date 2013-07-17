@@ -14,7 +14,7 @@ DISABLE_AUTO_TITLE='true' # was also messing up tmux window titles
 plugins=()
 
 # source oh-my-zsh
-source $ZSH//oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # -------------------------------------
 # Source additional zsh configuration files

@@ -10,6 +10,8 @@ alias rspec="bundle exec rspec"
 alias rks='rake konacha:serve'
 alias rdbm='rake db:migrate; rake test:prepare'
 
+alias v='vim'
+
 # listing files
 
 alias l='ls -lh'
@@ -49,7 +51,7 @@ gc() {
 alias gc!='git commit -v'
 alias gca='git commit -v -a'
 alias gcam='gca --amend'
-alias gch='git cherry-pick'
+alias gcp='git cherry-pick'
 alias gcm='git commit -v --amend'
 alias gco='git checkout'
 alias gcop='gco -p'
