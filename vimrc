@@ -126,6 +126,10 @@ set wmh=0
 " autoload .vimrc upon edit
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
+" Use silver searcher with ack.vim
+" brew install the_silver_searcher
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 " Search
 set hlsearch
 set incsearch
