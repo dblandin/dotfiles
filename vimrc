@@ -165,7 +165,7 @@ syntax on
 
 au BufNewFile,BufRead *.hamlbars setf haml
 
-" solarized options
+" color scheme
 colorscheme Tomorrow-Night
 
 " fix xterm colors
