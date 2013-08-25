@@ -100,6 +100,61 @@ map      <leader>t :call RunTestFile()<cr>
 map      <leader>T :w\|:silent !tmux send-keys -t bottom 'rspec -f d -t focus' C-m <CR>\|:redraw!<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Other Mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nnoremap <silent> <leader>y :TagbarToggle<CR>
+map <leader>d :NERDTreeToggle \| :silent NERDTreeMirror<CR>
+nnoremap <silent> <leader>r :CtrlP<CR>
+
+" use jk instead of <esc> to jump out of insert mode
+inoremap <esc> <nop>
+inoremap jk <esc>l
+
+" Tabularize
+nmap <Leader>a= :Tab /=<CR>
+vmap <Leader>a= :Tab /=<CR>
+nmap <Leader>a> :Tab /=><CR>
+vmap <Leader>a> :Tab /=><CR>
+nmap <Leader>a: :Tab /:\zs<CR>
+vmap <Leader>a: :Tab /:\zs<CR>
+
+" disable arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+" shortcuts
+map <C-J> <C-W>j<C-W>_
+map <C-K> <C-W>k<C-W>_
+nmap <C-H> <C-W>h<C-W><bar>
+nmap <C-L> <C-W>l<C-W><bar>
+
+map <S-H> gT " tab back
+map <S-L> gt " tab forward
+
+map <C-t><C-t> :tabnew<CR> " open new tab
+map <C-t><C-w> :tabclose<CR> " close tab
+
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Abbreviations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+iabbrev adn and
+iabbrev dfe def
+iabbrev @@ dblandin@gmail.com
+iabbrev ssig --<cr>Devon Blandin<cr>dblandin@gmail.com
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
@@ -306,44 +361,3 @@ function! RunTests(filename)
       exec ":redraw!"
   end
 endfunction
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Key Bindings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <leader>y :TagbarToggle<CR>
-map <leader>d :NERDTreeToggle \| :silent NERDTreeMirror<CR>
-nnoremap <silent> <leader>r :CtrlP<CR>
-
-" Tabularize
-nmap <Leader>a= :Tab /=<CR>
-vmap <Leader>a= :Tab /=<CR>
-nmap <Leader>a> :Tab /=><CR>
-vmap <Leader>a> :Tab /=><CR>
-nmap <Leader>a: :Tab /:\zs<CR>
-vmap <Leader>a: :Tab /:\zs<CR>
-
-" disable arrow keys
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-
-" shortcuts
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
-nmap <C-H> <C-W>h<C-W><bar>
-nmap <C-L> <C-W>l<C-W><bar>
-
-map <S-H> gT " tab back
-map <S-L> gt " tab forward
-
-map <C-t><C-t> :tabnew<CR> " open new tab
-map <C-t><C-w> :tabclose<CR> " close tab
-
-if exists('$TMUX')
-  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-else
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
