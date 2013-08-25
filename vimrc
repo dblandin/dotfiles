@@ -75,8 +75,6 @@ let g:dash_map = {
   \ 'ruby'       : 'rubymotion',
 \ }
 
-nmap <silent> <leader>f <Plug>DashGlobalSearch
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader Commands
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -84,27 +82,31 @@ nmap <silent> <leader>f <Plug>DashGlobalSearch
 let mapleader=" "
 let g:mapleader=" "
 
-map      <leader>c :Ack<space>
-map      <leader>n :sp ~/Dropbox/notes/coding-notes.txt<cr>
-map      <leader>vi :tabe $MYVIMRC<CR>
-map      <leader>/ :nohl<CR>
-map      <leader>pr orequire 'pry'; binding.pry<ESC>:w<CR>
+nnoremap <leader>c :Ack<space>
+nnoremap <leader>n :sp ~/Dropbox/notes/coding-notes.txt<CR>
+nnoremap <leader>vi :tabe $MYVIMRC<CR>
+nnoremap <leader>sn :CtrlP $HOME/.vim/snippets<CR>
+nnoremap <leader>/ :nohl<CR>
+nnoremap <leader>pr orequire 'pry'; binding.pry<ESC>:w<CR>
 vnoremap <leader>h :s/:\(\w*\) *=>/\1:/g<cr> " kill all hash rockets
-map      <leader>m :!open -a Marked %<cr><cr> " Markdown preview
-nmap     <leader>a= :Tab /=<CR>
-vmap     <leader>a= :Tab /=<CR>
-nmap     <leader>a: :Tab /:\zs<CR>
-vmap     <leader>a: :Tab /:\zs<CR>
+nnoremap <leader>m :!open -a Marked %<cr><cr> " Markdown preview
+
+nnoremap <leader>a= :Tab /=<CR>
+vnoremap <leader>a= :Tab /=<CR>
+nnoremap <leader>a: :Tab /:\zs<CR>
+vnoremap <leader>a: :Tab /:\zs<CR>
+
 nnoremap <leader>. :A<CR>
-map      <leader>t :call RunTestFile()<CR>
-map      <leader>T :w\|:silent !tmux send-keys -t bottom 'rspec -f d -t focus' C-m <CR>\|:redraw!<CR>
+nnoremap <leader>t :call RunTestFile()<CR>
+nnoremap <leader>T :w\|:silent !tmux send-keys -t bottom 'rspec -f d -t focus' C-m <CR>\|:redraw!<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Other Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-nnoremap <silent> <leader>y :TagbarToggle<CR>
-map <leader>d :NERDTreeToggle \| :silent NERDTreeMirror<CR>
+nmap <silent> <leader>f <Plug>DashGlobalSearch
+
+nnoremap <leader>d :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 nnoremap <silent> <leader>r :CtrlP<CR>
 
 " use jk instead of <esc> to jump out of insert mode
@@ -112,12 +114,12 @@ inoremap <esc> <nop>
 inoremap jk <esc>l
 
 " Tabularize
-nmap <Leader>a= :Tab /=<CR>
-vmap <Leader>a= :Tab /=<CR>
-nmap <Leader>a> :Tab /=><CR>
-vmap <Leader>a> :Tab /=><CR>
-nmap <Leader>a: :Tab /:\zs<CR>
-vmap <Leader>a: :Tab /:\zs<CR>
+nnoremap <Leader>a= :Tab /=<CR>
+vnoremap <Leader>a= :Tab /=<CR>
+nnoremap <Leader>a> :Tab /=><CR>
+vnoremap <Leader>a> :Tab /=><CR>
+nnoremap <Leader>a: :Tab /:\zs<CR>
+vnoremap <Leader>a: :Tab /:\zs<CR>
 
 " disable arrow keys
 noremap <Up> <Nop>
@@ -126,16 +128,16 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 
 " shortcuts
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
-nmap <C-H> <C-W>h<C-W><bar>
-nmap <C-L> <C-W>l<C-W><bar>
+nnoremap <C-J> <C-W>j<C-W>_
+nnoremap <C-K> <C-W>k<C-W>_
+nnoremap <C-H> <C-W>h<C-W><bar>
+nnoremap <C-L> <C-W>l<C-W><bar>
 
-map <S-H> gT " tab back
-map <S-L> gt " tab forward
+nnoremap <S-H> gT " tab back
+nnoremap <S-L> gt " tab forward
 
-map <C-t><C-t> :tabnew<CR> " open new tab
-map <C-t><C-w> :tabclose<CR> " close tab
+nnoremap <C-t><C-t> :tabnew<CR> " open new tab
+nnoremap <C-t><C-w> :tabclose<CR> " close tab
 
 if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
@@ -180,9 +182,7 @@ if &term =~ "xterm"
  endif
 endif
 
-" show operators on status line
-set showcmd
-
+set showcmd " show operators on status line
 set number
 set numberwidth=2
 set wmw=0
@@ -273,7 +273,7 @@ set pastetoggle=<F2>
 nnoremap <silent> <F3> :nohl<CR>
 
 " Toggle Spelling
-map <F4> :setlocal spell! spelllang=en_us<CR>
+nnoremap <F4> :setlocal spell! spelllang=en_us<CR>
 
 " Remove any trailing whitespace
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
