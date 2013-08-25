@@ -25,8 +25,14 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-" dependencies
-Bundle 'vim-scripts/tlib'
+" snipMate, dependencies: addon-mw-utils, tlib_vim, vim-snippets
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'honza/vim-snippets'
+Bundle 'garbas/vim-snipmate'
+
+" snippets
+Bundle 'honza/vim-snippets'
 
 " navigation
 Bundle 'tpope/vim-rails'
@@ -41,16 +47,12 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-eunuch'
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-abolish'
 
 " insert/visual mode
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'ervandew/supertab'
-
-" snippets
-Bundle 'garbas/vim-snipmate'
-Bundle 'scrooloose/snipmate-snippets'
-Bundle 'rcyrus/snipmate-snippets-rubymotion'
 
 " syntax
 Bundle 'vim-coffee-script'
@@ -147,28 +149,7 @@ set incsearch
 set softtabstop=2 shiftwidth=2 expandtab
 set autoindent
 
-set ofu=syntaxcomplete#Complete
-autocmd FileType java setlocal softtabstop=4 shiftwidth=4 expandtab
-
-" completion
-set wildmode=list:longest,list:full
-set wildignore+=*/.git/*,**/vendor/ruby/**,**/bin/*,**/tmp/*,*/.*,*.o,*.obj,.git,*.rbc,*.class,ruby/*
-set complete=.,w,t
-
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor'
-
-" remap the tab key to do autocompletion or indentation depending on the
-" context (from http://www.vim.org/tips/tip.php?tip_id=102)
-function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
-endfunction
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <s-tab> <c-n>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Intuitive backspacing in insert mode
