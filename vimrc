@@ -80,12 +80,13 @@ nmap <silent> <leader>f <Plug>DashGlobalSearch
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader Commands
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 let mapleader=" "
 let g:mapleader=" "
 
 map      <leader>c :Ack<space>
 map      <leader>n :sp ~/Dropbox/notes/coding-notes.txt<cr>
-map      <leader>vi :tabe ~/.vimrc<CR>
+map      <leader>vi :tabe $MYVIMRC<CR>
 map      <leader>/ :nohl<CR>
 map      <leader>pr orequire 'pry'; binding.pry<ESC>:w<CR>
 vnoremap <leader>h :s/:\(\w*\) *=>/\1:/g<cr> " kill all hash rockets
@@ -135,7 +136,7 @@ set wmh=0
 " Behavior
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " autoload .vimrc upon edit
-autocmd! bufwritepost .vimrc source ~/.vimrc
+autocmd! bufwritepost $MYVIMRC source $MYVIMRC
 
 " Use silver searcher with ack.vim
 " brew install the_silver_searcher
