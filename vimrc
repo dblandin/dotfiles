@@ -157,6 +157,7 @@ iabbrev ssig --<cr>Devon Blandin<cr>dblandin@gmail.com
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set nocompatible
 set history=50
 set ruler
@@ -183,13 +184,14 @@ endif
 set showcmd
 
 set number
-set numberwidth=5
+set numberwidth=2
 set wmw=0
 set wmh=0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Behavior
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " autoload .vimrc upon edit
 autocmd! bufwritepost $MYVIMRC source $MYVIMRC
 
@@ -216,6 +218,7 @@ set backspace=indent,eol,start
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Speed up vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set notimeout
 set ttimeout
 set timeoutlen=50
@@ -223,6 +226,7 @@ set timeoutlen=50
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Change cursor shape between modes (iTerm)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
   let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
@@ -261,6 +265,7 @@ set undolevels=1000
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Toggle Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Toggle Pasting
 set pastetoggle=<F2>
 
@@ -287,13 +292,9 @@ set statusline+=%-14(%l,%c%V%) " line, character
 set statusline+=%<%P           " file position
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Testing functions borrowed from Gary Berhardt
-" [github.com/garybernhardt/dotfiles/blob/master/.vimrc]
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Switch between test and production code
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 function! OpenTestAlternate()
   let new_file = AlternateForCurrentFile()
   exec ':e ' . new_file
@@ -322,6 +323,8 @@ endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Running Tests
+" Testing functions borrowed from Gary Berhardt
+" [github.com/garybernhardt/dotfiles/blob/master/.vimrc]
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 function! RunTestFile(...)
