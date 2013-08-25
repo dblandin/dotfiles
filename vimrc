@@ -88,7 +88,7 @@ let g:mapleader=" "
 
 nnoremap <leader>c :Ack<space>
 nnoremap <leader>n :sp ~/Dropbox/notes/coding-notes.txt<CR>
-nnoremap <leader>vi :tabe $MYVIMRC<CR>
+nnoremap <leader>vi :vs $MYVIMRC<CR>
 nnoremap <leader>sn :CtrlP $HOME/.vim/snippets<CR>
 nnoremap <leader>/ :nohl<CR>
 nnoremap <leader>pr orequire 'pry'; binding.pry<ESC>:w<CR>
