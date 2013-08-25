@@ -95,8 +95,8 @@ nmap     <leader>a= :Tab /=<CR>
 vmap     <leader>a= :Tab /=<CR>
 nmap     <leader>a: :Tab /:\zs<CR>
 vmap     <leader>a: :Tab /:\zs<CR>
-nnoremap <leader>. :call OpenTestAlternate()<cr>
-map      <leader>t :call RunTestFile()<cr>
+nnoremap <leader>. :A<CR>
+map      <leader>t :call RunTestFile()<CR>
 map      <leader>T :w\|:silent !tmux send-keys -t bottom 'rspec -f d -t focus' C-m <CR>\|:redraw!<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -290,36 +290,6 @@ set statusline+=%h%m%r%w       " status flags
 set statusline+=%=             " right align remainder
 set statusline+=%-14(%l,%c%V%) " line, character
 set statusline+=%<%P           " file position
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Switch between test and production code
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-function! OpenTestAlternate()
-  let new_file = AlternateForCurrentFile()
-  exec ':e ' . new_file
-endfunction
-function! AlternateForCurrentFile()
-  let current_file = expand("%")
-  let new_file = current_file
-  let in_spec = match(current_file, '^spec/') != -1
-  let going_to_spec = !in_spec
-  let in_app = match(current_file, '\<controllers\>') != -1 || match(current_file, '\<models\>') != -1 || match(current_file, '\<views\>') || match(current_file, '\<helpers\>') != -1
-  if going_to_spec
-    if in_app
-      let new_file = substitute(new_file, '^app/', '', '')
-    end
-    let new_file = substitute(new_file, '\.rb$', '_spec.rb', '')
-    let new_file = 'spec/' . new_file
-  else
-    let new_file = substitute(new_file, '_spec\.rb$', '.rb', '')
-    let new_file = substitute(new_file, '^spec/', '', '')
-    if in_app
-      let new_file = 'app/' . new_file
-    end
-  endif
-  return new_file
-endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Running Tests
