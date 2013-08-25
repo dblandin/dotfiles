@@ -207,7 +207,7 @@ set incsearch
 set softtabstop=2 shiftwidth=2 expandtab
 set autoindent
 
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor\|build\|bin'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Intuitive backspacing in insert mode
