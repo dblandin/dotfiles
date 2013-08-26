@@ -28,7 +28,6 @@ Bundle 'gmarik/vundle'
 " snipMate, dependencies: addon-mw-utils, tlib_vim, vim-snippets
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
-Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
 
 " snippets
@@ -126,10 +125,10 @@ nnoremap <Leader>a: :Tab /:\zs<CR>
 vnoremap <Leader>a: :Tab /:\zs<CR>
 
 " disable arrow keys
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+noremap <Up>    <nop>
+noremap <Down>  <nop>
+noremap <Left>  <nop>
+noremap <Right> <nop>
 
 " shortcuts
 nnoremap <C-J> <C-W>j<C-W>_
