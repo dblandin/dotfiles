@@ -3,6 +3,7 @@
   email = dblandin@gmail.com
 [core]
   excludesfile = ~/.gitignore_global
+	editor = /usr/local/bin/vim
 [github]
   user = dblandin
 [color]
