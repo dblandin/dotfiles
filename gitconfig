@@ -2,8 +2,7 @@
   name = Devon Blandin
   email = dblandin@gmail.com
 [core]
-  excludesfile = /Users/dblandin/.gitignore_global
-  excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore_global
 [github]
   user = dblandin
 [color]
