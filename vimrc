@@ -142,6 +142,25 @@ nnoremap <S-L> gt " tab forward
 nnoremap <C-t><C-t> :tabnew<CR> " open new tab
 nnoremap <C-t><C-w> :tabclose<CR> " close tab
 
+" find git merge conflict markers
+nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
+
+" set text wrapping toggles
+nmap <silent> <leader>tw :set invwrap<CR>:set wrap?<CR>
+
+" cd to the directory containing the file in the buffer
+nmap <silent> <leader>cd :lcd %:h<CR>
+
+" Create the directory containing the file in the buffer
+nmap <silent> <leader>md :!mkdir -p %:p:h<CR>
+
+" Some helpers to edit mode
+" http://vimcasts.org/e/14
+nmap <leader>ew :e <C-R>=expand('%:h').'/'<cr>
+nmap <leader>es :sp <C-R>=expand('%:h').'/'<cr>
+nmap <leader>ev :vsp <C-R>=expand('%:h').'/'<cr>
+nmap <leader>et :tabe <C-R>=expand('%:h').'/'<cr>
+
 if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
   let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
