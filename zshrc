@@ -48,8 +48,6 @@ setopt nocorrectall; setopt correct # disable autocorrect
 export EDITOR=vim
 export SHELL=/bin/zsh
 
-export PATH=/Applications/Postgres.app/Contents/MacOS/bin/:$PATH
-
 # -------------------------------------
 # rbenv config
 # -------------------------------------
@@ -79,3 +77,5 @@ if which tmux 2>&1 >/dev/null; then
     tmux attach -t $(whoami) || tmux new -s $(whoami); exit
   fi
 fi
+
+source $HOME/.zshrc.local
