@@ -11,7 +11,7 @@ DISABLE_AUTO_UPDATE='true'
 DISABLE_AUTO_TITLE='true' # was also messing up tmux window titles
 
 # oh-my-zsh plugins (~/.oh-my-zsh/plugins/)
-plugins=()
+plugins=(autojump)
 
 # source oh-my-zsh
 source $ZSH/oh-my-zsh.sh
