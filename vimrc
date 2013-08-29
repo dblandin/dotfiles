@@ -101,7 +101,7 @@ vnoremap <leader>a: :Tab /:\zs<CR>
 
 nnoremap <leader>. :A<CR>
 nnoremap <leader>t :call RunTestFile()<CR>
-nnoremap <leader>T :w\|:silent !tmux send-keys -t bottom 'rspec -f d -t focus' C-m <CR>\|:redraw!<CR>
+nnoremap <leader>T :w\|:silent !tmux send-keys -t bottom C-u 'rspec -f d -t focus' C-m <CR>\|:redraw!<CR>
 
 " Tabularize
 nnoremap <Leader>a= :Tab /=<CR>
