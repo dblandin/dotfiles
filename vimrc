@@ -103,19 +103,6 @@ nnoremap <leader>. :A<CR>
 nnoremap <leader>t :call RunTestFile()<CR>
 nnoremap <leader>T :w\|:silent !tmux send-keys -t bottom 'rspec -f d -t focus' C-m <CR>\|:redraw!<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Other Mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-nmap <silent> <leader>f <Plug>DashGlobalSearch
-
-nnoremap <leader>d :NERDTreeToggle \| :silent NERDTreeMirror<CR>
-nnoremap <silent> <leader>r :CtrlP<CR>
-
-" use jk instead of <esc> to jump out of insert mode
-inoremap <esc> <nop>
-inoremap jk <esc>l
-
 " Tabularize
 nnoremap <Leader>a= :Tab /=<CR>
 vnoremap <Leader>a= :Tab /=<CR>
@@ -123,6 +110,22 @@ nnoremap <Leader>a> :Tab /=><CR>
 vnoremap <Leader>a> :Tab /=><CR>
 nnoremap <Leader>a: :Tab /:\zs<CR>
 vnoremap <Leader>a: :Tab /:\zs<CR>
+
+" Dash
+nmap <silent> <leader>k <Plug>DashGlobalSearch
+
+nnoremap <leader>d :NERDTreeToggle \| :silent NERDTreeMirror<CR>
+nnoremap <silent> <leader>r :CtrlP<CR>
+nnoremap <silent> <leader>b :CtrlPBuffer<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Other Mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" use jk instead of <esc> to jump out of insert mode
+inoremap <esc> <nop>
+inoremap jk <esc>l
 
 " disable arrow keys
 noremap <Up>    <nop>
