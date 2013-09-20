@@ -17,6 +17,9 @@ alias v='vim'
 alias l='ls -lh'
 alias ll='ls -lah'
 
+# bower
+alias bower='noglob bower'
+
 # tmux
 
 alias ta='tmux attach'
