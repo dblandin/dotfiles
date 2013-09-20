@@ -122,16 +122,8 @@ nnoremap <silent> <leader>b :CtrlPBuffer<CR>
 " Other Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
 " use jk instead of <esc> to jump out of insert mode
-inoremap <esc> <nop>
 inoremap jk <esc>l
-
-" disable arrow keys
-noremap <Up>    <nop>
-noremap <Down>  <nop>
-noremap <Left>  <nop>
-noremap <Right> <nop>
 
 " shortcuts
 nnoremap <C-J> <C-W>j<C-W>_
@@ -264,8 +256,6 @@ endif
 " Backup Preferences
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set nobackup
-set nowritebackup
 set backupdir=~/.vim/tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim/tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
