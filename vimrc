@@ -86,7 +86,7 @@ let mapleader=" "
 let g:mapleader=" "
 
 nnoremap <leader>c :Ack<space>
-nnoremap <leader>n :sp ~/Dropbox/notes/coding-notes.txt<CR>
+nnoremap <leader>n :sp ~/Dropbox/notes/coding-notes.md<CR>
 nnoremap <leader>vi :vs $MYVIMRC<CR>
 nnoremap <leader>sn :CtrlP $HOME/.vim/snippets<CR>
 nnoremap <leader>/ :nohl<CR>
