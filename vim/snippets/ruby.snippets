@@ -2,3 +2,76 @@ snippet defm
 	def ${1:method_name}
 		@$1 ||= ${2}
 	end
+
+snippet uitableviewcell
+	class ${1:class_name} < UITableViewCell
+	  IDENTIFIER = '$1Identifier'
+
+	  def initWithStyle(style, reuseIdentifier: reuse_identifier)
+	    super.tap do |cell|
+		    ${2}
+	    end
+	  end
+	end
+
+snippet uiview
+	class ${1:class_name} < UIView
+	  def initWithFrame(frame)
+	    super.tap do |view|
+		    ${2}
+	    end
+	  end
+	end
+
+snippet motionlayout
+	Motion::Layout.new do |layout|
+	  layout.view       ${1:view}
+	  layout.subviews   ${2:subviews}
+	  layout.metrics    ${3:metrics}
+	  layout.horizontal '${4:horizontal}'
+	  layout.vertical   '${5:vertical}'
+	end
+
+snippet itemconstraint
+	NSLayoutConstraint.constraintWithItem(
+		  ${1:item},
+		  attribute:  ${2:attribute},
+		  relatedBy:  ${3:related_by},
+		  toItem:     ${4:item},
+		  attribute:  ${5:attribute},
+		  multiplier: ${5:multiplier},
+		  constant:   ${6:constant})
+
+snippet uitableview
+	class ${1:class} < UITableView
+		def initWithFrame(frame, style: style)
+			super.tap do |table_view|
+			  ${2}
+			end
+		end
+	end
+
+snippet uitableviewdatasource
+	def numberOfSectionsInTableView(table_view)
+		${1:number_of_sections}
+	end
+
+	def tableView(table_view, numberOfRowsInSection: section)
+		${2:number_of_rows}
+	end
+
+	def tableView(table_view, cellForRowAtIndexPath: index_path)
+		table_view.dequeueReusableCellWithIdentifier(${3:cell_class}::IDENTIFIER).tap do |cell|
+		  # initialize cell
+		end
+	end
+
+snippet uitableviewdelegate
+	def tableView(table_view, heightForRowAtIndexPath: index_path)
+	end
+
+	def tableView(table_view, willDisplayCell: cell, forRowAtIndexPath: index_path)
+	end
+
+	def tableView(table_view, didEndDisplayingCell: cell, forRowAtIndexPath: index_path)
+	end
