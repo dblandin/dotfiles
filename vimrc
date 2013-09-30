@@ -51,7 +51,7 @@ Bundle 'tpope/vim-abolish'
 
 " insert/visual mode
 Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-commentary'
 
 " syntax
 Bundle 'vim-coffee-script'
