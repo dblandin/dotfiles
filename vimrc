@@ -50,7 +50,6 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-abolish'
 
 " insert/visual mode
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdcommenter'
 
@@ -74,9 +73,6 @@ let g:tagbar_autofocus = 1
 let g:dash_map = {
   \ 'ruby'       : 'rubymotion',
 \ }
-
-let g:ycm_key_list_select_completion   = ['<c-n>']
-let g:ycm_key_list_previous_completion = ['<c-p>']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader Commands
