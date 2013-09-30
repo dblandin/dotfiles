@@ -34,14 +34,19 @@ snippet motionlayout
 
 snippet itemconstraint
 	NSLayoutConstraint.constraintWithItem(
-		  ${1:item},
-		  attribute:  ${2:attribute},
-		  relatedBy:  ${3:related_by},
-		  toItem:     ${4:item},
-		  attribute:  ${5:attribute},
-		  multiplier: ${5:multiplier},
-		  constant:   ${6:constant})
-
+	  ${1:item},
+	  attribute:  ${2:attribute},
+	  relatedBy:  ${3:related_by},
+	  toItem:     ${4:item},
+	  attribute:  ${5:attribute},
+	  multiplier: ${6:multiplier},
+	  constant:   ${7:constant})
+snippet formatconstraint
+	NSLayoutConstraint.constraintsWithVisualFormat(
+	  ${1:format},
+	  options: ${2:options},
+	  metrics: ${3:metrics},
+	  views:   ${4:views})
 snippet uitableview
 	class ${1:class} < UITableView
 		def initWithFrame(frame, style: style)
