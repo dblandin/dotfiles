@@ -58,6 +58,7 @@ Bundle 'vim-coffee-script'
 Bundle 'davidoc/taskpaper.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'elixir-lang/vim-elixir'
 
 filetype indent plugin on
 
