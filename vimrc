@@ -90,6 +90,7 @@ nnoremap <leader>/ :nohl<CR>
 nnoremap <leader>pr orequire 'pry'; binding.pry<ESC>:w<CR>
 vnoremap <leader>h :s/:\(\w*\) *=>/\1:/g<cr> " kill all hash rockets
 nnoremap <leader>m :!open -a Marked %<cr><cr> " Markdown preview
+vnoremap <leader>j !python -m json.tool<CR>
 
 nnoremap <leader>a= :Tab /=<CR>
 vnoremap <leader>a= :Tab /=<CR>
