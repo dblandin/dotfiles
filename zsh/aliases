@@ -10,7 +10,8 @@ alias rspec="bundle exec rspec"
 alias rks='rake konacha:serve'
 alias rdbm='rake db:migrate; rake test:prepare'
 
-alias v='vim'
+alias v='mvim -v'
+alias vim='mvim -v'
 
 # listing files
 
