@@ -74,7 +74,7 @@ export RUBY_HEAP_MIN_SLOTS=40000
 
 if which tmux 2>&1 >/dev/null; then
   if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
-    tmux attach -t $(whoami) || tmux new -s $(whoami); exit
+    tmux attach -t $(whoami) || tmux new -s $(whoami)
   fi
 fi
 
