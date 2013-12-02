@@ -2,7 +2,18 @@ snippet defm
 	def ${1:method_name}
 		@$1 ||= ${2}
 	end
+snippet uiviewcontroller
+	class ${1:class_name} < UIViewController
+		def viewDidLoad
+			super
 
+			setup_constraints
+		end
+
+		def setup_constraints
+			${2}
+		end
+	end
 snippet uitableviewcell
 	class ${1:class_name} < UITableViewCell
 	  IDENTIFIER = '$1Identifier'
@@ -79,4 +90,24 @@ snippet uitableviewdelegate
 	end
 
 	def tableView(table_view, didEndDisplayingCell: cell, forRowAtIndexPath: index_path)
+	end
+
+snippet uicollectionviewdatasource
+	def collectionView(collectionView, numberOfItemsInSection: section)
+	end
+
+	def collectionView(collection_view, cellForItemAtIndexPath: index_path)
+	end
+
+snippet uicollectionviewdatasourcefull
+	def collectionView(collectionView, numberOfItemsInSection: section)
+	end
+
+	def numberOfSectionsInCollectionView(collection_view)
+	end
+
+	def collectionView(collection_view, cellForItemAtIndexPath: index_path)
+	end
+
+	def collectionView(collection_view, viewForSupplementaryElementOfKind: kind, atIndexPath: index_path)
 	end
