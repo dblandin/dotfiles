@@ -1,0 +1,8 @@
+snippet boxen-project
+	class projects::${1:project_name} {
+	  boxen::project { '$1':
+			${2:options}
+			source => 'dscout/$1'
+	  }
+	}
+
