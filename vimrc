@@ -56,7 +56,7 @@ Bundle 'tpope/vim-commentary'
 " syntax
 Bundle 'vim-coffee-script'
 Bundle 'davidoc/taskpaper.vim'
-Bundle 'tpope/vim-markdown'
+Bundle 'jtratner/vim-flavored-markdown'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'elixir-lang/vim-elixir'
 
@@ -74,6 +74,11 @@ let g:tagbar_autofocus = 1
 let g:dash_map = {
   \ 'ruby'       : 'rubymotion',
 \ }
+
+augroup markdown
+  au!
+  au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+augroup END
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader Commands
