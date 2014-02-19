@@ -6,10 +6,11 @@
 [github]
   user = dblandin
 [color]
-  ui = always
-  diff = auto
-  status = auto
-  branch = auto
+  branch      = true
+  diff        = true
+  interaction = true
+  status      = true
+  ui          = true
 [apply]
   whitespace = warn
 [merge]
