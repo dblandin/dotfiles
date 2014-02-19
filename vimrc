@@ -76,11 +76,10 @@ let g:dash_map = {
   \ 'ruby'       : 'rubymotion',
 \ }
 
-augroup markdown
-  au!
-  au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
-  au BufNewFile,BufRead *.cap setlocal filetype=ruby
-augroup END
+au BufNewFile,BufRead *.md,*.markdown setlocal filetype=markdown
+au BufNewFile,BufRead *.cap setlocal filetype=ruby
+
+au BufRead,BufNewFile *.md setlocal textwidth=80
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader Commands
