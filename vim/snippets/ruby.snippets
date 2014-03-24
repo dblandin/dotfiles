@@ -111,3 +111,20 @@ snippet uicollectionviewdatasourcefull
 
 	def collectionView(collection_view, viewForSupplementaryElementOfKind: kind, atIndexPath: index_path)
 	end
+snippet app_delegate
+	class AppDelegate
+	  attr_reader :window
+
+	  def application(application, didFinishLaunchingWithOptions: launch_options)
+			initialize_main_controller
+
+			true
+	  end
+
+	  def initialize_main_controller
+			@window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
+
+			window.setRootViewController(ViewController.new)
+			window.makeKeyAndVisible
+	  end
+	end
