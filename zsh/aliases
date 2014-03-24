@@ -25,8 +25,8 @@ alias bower='noglob bower'
 alias ta='tmux attach'
 alias tn='tmux new -s'
 alias tl='tmux ls'
-alias tpn='tmux -S /tmp/pair new -s'
-alias tpa='tmux -S /tmp/pair attach'
+alias tpn='tmux -S /tmp/pair new -s pair && chmod 755 /tmp/pair'
+alias tpa='tmux -S /tmp/pair attach -t pair'
 alias tpl='tmux -S /tmp/pair ls'
 
 # git
