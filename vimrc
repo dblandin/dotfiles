@@ -29,6 +29,7 @@ Bundle 'gmarik/vundle'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
+Bundle 'AzizLight/rubymotioncomplete.vim'
 
 " snippets
 Bundle 'honza/vim-snippets'
