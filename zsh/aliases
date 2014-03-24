@@ -103,13 +103,16 @@ alias grsh='git reset --soft HEAD~'
 alias grv='git remote -v'
 alias gs='git show'
 alias gs.='git show --color-words="."'
-alias gst='git stash'
-alias gstp='git stash pop'
-alias gstl='git stash list'
-alias gstc='git stash clear'
 alias gup='git smart-pull'
 gupstation() {
   gup
   gf production
   gf staging
 }
+
+# git stashing
+alias gst='git stash'
+alias gstp='git stash pop'
+alias gstl='git stash list'
+alias gstc='git stash clear'
+
