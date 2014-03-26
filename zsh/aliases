@@ -20,8 +20,10 @@ alias ll='ls -lah'
 # bower
 alias bower='noglob bower'
 
-# tmux
+# www
+alias www='python -m SimpleHTTPServer'
 
+# tmux
 alias ta='tmux attach'
 alias tn='tmux new -s'
 alias tl='tmux ls'
@@ -30,7 +32,6 @@ alias tpa='tmux -S /tmp/pair attach -t pair'
 alias tpl='tmux -S /tmp/pair ls'
 
 # git
-
 alias s='git status -sb $argv; return 0'
 alias d='gd $argv'
 
