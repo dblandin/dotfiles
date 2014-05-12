@@ -1,2 +1,6 @@
 vim/bundle
 vim/.netrwhist
+
+# OSX Junk
+*._*
+*.DS_Store
