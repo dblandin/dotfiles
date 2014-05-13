@@ -1,0 +1,15 @@
+cask install adium
+cask install airfoil
+cask install alfred
+cask install caffeine
+cask install dash
+cask install dropbox
+cask install firefox
+cask install flux
+cask install google-chrome
+cask install keepassx
+cask install kindle
+cask install sizeup
+cask install sketch
+cask install slack
+cask install spotify
