@@ -49,6 +49,7 @@ Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-abolish'
+Bundle 'tommcdo/vim-exchange'
 
 " insert/visual mode
 Bundle 'tpope/vim-surround'
