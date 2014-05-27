@@ -100,11 +100,6 @@ vnoremap <leader>h :s/:\(\w*\) *=>/\1:/g<cr> " kill all hash rockets
 nnoremap <leader>m :!open -a Marked %<cr><cr> " Markdown preview
 vnoremap <leader>j !python -m json.tool<CR>
 
-nnoremap <leader>a= :Tab /=<CR>
-vnoremap <leader>a= :Tab /=<CR>
-nnoremap <leader>a: :Tab /:\zs<CR>
-vnoremap <leader>a: :Tab /:\zs<CR>
-
 nnoremap <leader>. :A<CR>
 nnoremap <leader>t :call RunTestFile()<CR>
 nnoremap <leader>T :w\|:silent !tmux send-keys -t bottom C-u 'rspec -f d -t focus' C-m <CR>\|:redraw!<CR>
