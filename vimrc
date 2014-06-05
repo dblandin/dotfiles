@@ -62,6 +62,7 @@ Bundle 'jtratner/vim-flavored-markdown'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'elixir-lang/vim-elixir'
 Bundle 'puppetlabs/puppet-syntax-vim'
+Bundle 'reedes/vim-colors-pencil'
 
 filetype indent plugin on
 
@@ -71,6 +72,8 @@ let NERDTreeCaseSensitiveSort = 1
 let NERDTreeWinPos = "right"
 
 let g:tagbar_autofocus = 1
+
+let g:airline_theme = 'pencil'
 
 " Dash
 "
@@ -186,7 +189,8 @@ syntax on
 au BufNewFile,BufRead *.hamlbars setf haml
 
 " color scheme
-colorscheme Tomorrow-Night
+colorscheme pencil
+set background=dark
 
 " fix xterm colors
 if &term =~ "xterm"
