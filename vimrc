@@ -50,6 +50,9 @@ Bundle 'rizzatti/dash.vim'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-abolish'
 Bundle 'tommcdo/vim-exchange'
+Bundle 'bling/vim-airline'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'bling/vim-bufferline'
 
 " insert/visual mode
 Bundle 'tpope/vim-surround'
