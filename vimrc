@@ -132,6 +132,8 @@ nnoremap <silent> <leader>b :CtrlPBuffer<CR>
 " use jk instead of <esc> to jump out of insert mode
 inoremap jk <esc>l
 
+nnoremap ; :
+
 " shortcuts
 nnoremap <C-J> <C-W>j<C-W>_
 nnoremap <C-K> <C-W>k<C-W>_
