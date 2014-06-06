@@ -158,6 +158,12 @@ nmap <silent> <leader>cd :lcd %:h<CR>
 " Create the directory containing the file in the buffer
 nmap <silent> <leader>md :!mkdir -p %:p:h<CR>
 
+nnoremap    v   <C-V>
+nnoremap <C-V>     v
+
+vnoremap    v   <C-V>
+vnoremap <C-V>     v
+
 " Some helpers to edit mode
 " http://vimcasts.org/e/14
 nmap <leader>ew :e <C-R>=expand('%:h').'/'<cr>
