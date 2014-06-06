@@ -53,6 +53,8 @@ Bundle 'tommcdo/vim-exchange'
 Bundle 'bling/vim-airline'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'bling/vim-bufferline'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 
 " insert/visual mode
 Bundle 'tpope/vim-surround'
