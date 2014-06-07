@@ -61,12 +61,9 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-commentary'
 
 " syntax
-Bundle 'vim-coffee-script'
+Bundle 'sheerun/vim-polyglot'
 Bundle 'davidoc/taskpaper.vim'
-Bundle 'jtratner/vim-flavored-markdown'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'puppetlabs/puppet-syntax-vim'
+
 Bundle 'reedes/vim-colors-pencil'
 
 filetype indent plugin on
