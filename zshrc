@@ -31,9 +31,11 @@ source $HOME/.zsh/zsh_functions
 set -o vi
 
 # history search bindings
-bindkey -M vicmd '?' history-incremental-search-backward
-bindkey '^p' history-substring-search-up
-bindkey '^n' history-substring-search-down
+bindkey '^r'   history-incremental-pattern-search-backward
+bindkey '^p'   history-beginning-search-backward
+bindkey '^n'   history-beginning-search-forward
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
 # -------------------------------------
 # additional zsh setup
