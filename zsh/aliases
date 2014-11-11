@@ -117,3 +117,4 @@ alias gstp='git stash pop'
 alias gstl='git stash list'
 alias gstc='git stash clear'
 
+alias json="python -mjson.tool"
