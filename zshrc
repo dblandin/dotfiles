@@ -41,7 +41,7 @@ bindkey "^[[B" history-beginning-search-forward
 # additional zsh setup
 # -------------------------------------
 
-setopt nocorrectall; setopt correct # disable autocorrect
+unsetopt correct_all
 
 # -------------------------------------
 # environment variables
