@@ -63,6 +63,7 @@ Bundle 'tpope/vim-commentary'
 " syntax
 Bundle 'sheerun/vim-polyglot'
 Bundle 'davidoc/taskpaper.vim'
+Bundle 'plasticboy/vim-markdown'
 
 Bundle 'reedes/vim-colors-pencil'
 
@@ -240,6 +241,7 @@ set softtabstop=2 shiftwidth=2 expandtab
 set autoindent
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor\|bin'
+let g:vim_markdown_folding_disabled=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Intuitive backspacing in insert mode
