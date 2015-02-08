@@ -55,6 +55,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'bling/vim-bufferline'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
+Plugin 'ryanss/vim-hackernews'
 
 " insert/visual mode
 Bundle 'tpope/vim-surround'
