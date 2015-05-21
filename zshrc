@@ -70,6 +70,10 @@ export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_GC_HEAP_FREE_SLOTS=500000
 export RUBY_GC_HEAP_INIT_SLOTS=40000
 
+# history timestamp format
+
+export HISTTIMEFORMAT="%F %T "
+
 # -------------------------------------
 # tmux
 # -------------------------------------
