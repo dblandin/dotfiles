@@ -1,0 +1,31 @@
+\set QUIET 1
+
+-- benchmark SQL queries
+\timing
+
+-- choose to continue or abort transaction
+\set ON_ERROR_ROLLBACK interactive
+
+-- show versbose error reports
+\set VERBOSITY verbose
+
+-- smart formatting
+\x auto
+
+-- prompt setup
+\set PROMPT1 '%[%033[1m%]%M/%/%R%[%033[0m%]%# '
+\set PROMPT2 ''
+
+-- database-specfic history files
+\set HISTFILE ~/.psql_history- :DBNAME
+
+-- ignore duplicate commands
+\set HISTCONTROL ignoredups
+
+-- autcomplete in UPPERCASE
+\set COMP_KEYWORD_CASE upper
+
+-- show null
+\pset null [null]
+
+\unset QUIET

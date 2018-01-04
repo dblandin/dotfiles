@@ -1,0 +1,3 @@
+EXCLUDES="system"
+SYMLINK_DIRS="bin"
+UNDOTTED="bin"

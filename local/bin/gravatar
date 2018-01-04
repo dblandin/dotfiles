@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+if [ -z "$1" ]; then
+  printf "usage: gravatar <email>" >&2
+  exit 1
+fi
+
+curl "https://gravatar.com/avatar/$(echo -n $1 | md5sum | cut -d ' ' -f 1)?s=500" > avatar.png

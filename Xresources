@@ -1,0 +1,21 @@
+!Xft.dpi: 192
+Xft.antialias:true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintslight
+
+URxvt.font: xft:Droid Sans Mono-12
+URxvt.boldFont: xft:Droid Sans Mono-12
+
+URxvt.scrollBar: false
+URxvt.urgentOnBell: true
+URxvt.visualBell: false
+URxvt.scrollStyle: plain
+URxvt.bordeless: true
+URxvt.internalBorder: 0
+URxvt.externalBorder: 0
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.matcher.button: 1
+URxvt.perl-ext: default,url-select
+URxvt.url-select.launcher: /usr/bin/google-chrome-stable
+URxvt.url-select.underline: true

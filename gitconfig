@@ -1,0 +1,20 @@
+[user]
+  name = Devon Blandin
+  email = dblandin@gmail.com
+  signingkey = 3A7C29B21C93546719AD78CEA4A770EFEE20148C
+[core]
+  excludesfile = ~/.gitignore_global
+[github]
+  user = dblandin
+[color]
+  branch      = true
+  diff        = true
+  interaction = true
+  status      = true
+  ui          = true
+[apply]
+  whitespace = warn
+[format]
+  pretty = oneline
+[commit]
+  gpgsign = true
