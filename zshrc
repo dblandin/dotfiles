@@ -36,11 +36,6 @@ export SAVEHIST=100000
 setopt INC_APPEND_HISTORY
 setopt histignorespace
 
-export BROWSER=$(which nvim)
-export EDITOR=$(which nvim)
-export SHELL=$(which zsh)
-export VISUAL=$(which nvim)
-
 export PS1='$ '
 source /usr/share/chruby/chruby.sh
 source /usr/share/chruby/auto.sh
