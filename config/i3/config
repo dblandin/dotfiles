@@ -18,7 +18,7 @@ set $mod Mod1
 
 focus_follows_mouse no
 
-exec i3-msg 'workspace number 3: chat; exec --no-startup-idslack'
+exec i3-msg 'workspace number 3: chat;'
 exec i3-msg 'workspace number 1: term; exec urxvt'
 exec ~/bin/batt
 # exec_always $HOME/.config/lemonbuddy/launch.sh
