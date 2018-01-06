@@ -58,7 +58,7 @@ set $mode_open launch: [b]rowser [s]potify
 bindsym $mod+o mode "$mode_open"
 
 mode "$mode_open" {
-    bindsym b exec firefox; mode "default"
+    bindsym b exec xdg-open "https://start.duckduckgo.com"; mode "default"
     bindsym s exec spotify; mode "default"
 
     bindsym Escape mode "default"
