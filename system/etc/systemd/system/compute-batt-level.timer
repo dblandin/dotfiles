@@ -1,0 +1,8 @@
+[Unit]
+Description=Run compute-batt-level.service every 1 minute
+
+[Timer]
+OnCalendar=*:0/1
+
+[Install]
+WantedBy=compute-batt-level.service

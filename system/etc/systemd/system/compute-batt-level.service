@@ -1,0 +1,6 @@
+[Unit]
+Description=Computes a combined battery level
+
+[Service]
+Type=oneshot
+ExecStart=/home/devon/.local/bin/compute-combined-battery-level
