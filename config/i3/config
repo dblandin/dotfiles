@@ -20,8 +20,7 @@ focus_follows_mouse no
 
 exec i3-msg 'workspace number 3: chat;'
 exec i3-msg 'workspace number 1: term; exec urxvt'
-# exec ~/.local/bin/batt
-# exec_always $HOME/.config/lemonbuddy/launch.sh
+exec ~/.local/bin/compute-battery-level
 
 hide_edge_borders both
 set $border none
