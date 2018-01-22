@@ -13,7 +13,7 @@
     # <http://developer.gnome.org/pango/stable/PangoMarkupFormat.html>.
     # If markup is not allowed, those tags will be stripped out of the
     # message.
-    allow_markup = yes
+    markup = yes
 
     # The format of the message.  Possible variables are:
     #   %a  appname
@@ -149,7 +149,8 @@
     max_icon_size = 100
 
     # Paths to default icons.
-    icon_folders = /usr/share/icons/gnome/32x32/status/:/usr/share/icons/gnome/32x32/devices/:/usr/share/icons/gnome/32x32/apps/:/usr/share/icons/gnome/32x32/emblems/:/usr/share/icons/gnome/32x32/actions/:/usr/share/icons/hicolor/32x32/apps/
+    # icon_folders = /usr/share/icons/gnome/32x32/status/:/usr/share/icons/gnome/32x32/devices/:/usr/share/icons/gnome/32x32/apps/:/usr/share/icons/gnome/32x32/emblems/:/usr/share/icons/gnome/32x32/actions/:/usr/share/icons/hicolor/32x32/apps/
+    icon_path = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/
 
 [shortcuts]
 
