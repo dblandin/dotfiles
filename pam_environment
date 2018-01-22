@@ -1,5 +1,6 @@
 SSH_AUTH_SOCK   DEFAULT="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 GNUPGHOME   DEFAULT="/home/@{PAM_USER}/.config/gnupg"
+XDG_CONFIG_HOME DEFAULT="/home/@{PAM_USER}/.config"
 
 BROWSER DEFAULT="google-chrome-stable"
 EDITOR  DEFAULT="nvim"
