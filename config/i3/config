@@ -20,6 +20,7 @@ focus_follows_mouse no
 
 exec i3-msg 'workspace number 3: chat;'
 exec i3-msg 'workspace number 1: term; exec urxvt'
+exec --no-startup-id systemctl --user start redshift-gtk
 
 hide_edge_borders both
 set $border none
