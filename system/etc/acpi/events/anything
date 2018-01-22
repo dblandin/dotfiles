@@ -1,3 +1,3 @@
 # Pass all events to our one handler script
 event=.*
-action=~/.local/bin/acpi-handler %e
+action=/home/devon/.local/bin/acpi-handler %e

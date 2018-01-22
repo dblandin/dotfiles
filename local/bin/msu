@@ -8,11 +8,7 @@ set -e
 # * https://wiki.archlinux.org/index.php/Acpid
 #
 # /etc/udev/rules.d/10-monitor.rules
-# ACTION=="change", SUBSYSTEM=="drm", RUN+="/home/will/bin/runx /home/will/bin/msu -s 1 && /home/will/bin/runx /home/will/bin/wallpaper"
-#
-# /etc/acpi/handler.sh (add the following for open/close events
-# /home/will/bin/runx /home/will/bin/msu
-# /home/will/bin/runx /home/will/bin/wallpaper
+# ACTION=="change", SUBSYSTEM=="drm", RUN+="/home/devon/.local/bin/runx /home/devon/.local/bin/msu -s 1"
 
 while getopts ":s:" opt; do
   case $opt in
