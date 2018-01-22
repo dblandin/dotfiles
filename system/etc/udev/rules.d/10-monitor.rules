@@ -1,0 +1,1 @@
+ACTION=="change", SUBSYSTEM=="drm", RUN+="/home/devon/.local/bin/runx /home/devon/.local/bin/msu -s 1"
