@@ -16,7 +16,7 @@ fi
 
 if [ $UID -eq 0 ]; then
   printf -v cmd "%q " "$@"
-  set -- su patrick -c "$cmd"
+  set -- su devon -c "$cmd"
 fi
 
 DISPLAY=:0 XAUTHORITY="$(xauthority)" "$@"
