@@ -17,5 +17,5 @@ URxvt.externalBorder: 0
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.matcher.button: 1
 URxvt.perl-ext: default,url-select
-URxvt.url-select.launcher: /usr/bin/google-chrome-stable
+URxvt.url-select.launcher: /usr/bin/firefox
 URxvt.url-select.underline: true
