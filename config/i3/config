@@ -18,7 +18,6 @@ set $mod Mod1
 
 focus_follows_mouse no
 
-exec i3-msg 'workspace number 3: chat;'
 exec i3-msg 'workspace number 1: term; exec urxvt'
 exec --no-startup-id systemctl --user start redshift-gtk
 
@@ -57,23 +56,24 @@ set $mode_open launch: [b]rowser [s]potify
 bindsym $mod+o mode "$mode_open"
 
 mode "$mode_open" {
-    bindsym b exec google-chrome-stable; mode "default"
+    bindsym b exec firefox; mode "default"
     bindsym s exec spotify; mode "default"
 
     bindsym Escape mode "default"
     bindsym Return mode "default"
 }
 
-set $mode_travel travel: [c]hat
-bindsym $mod+t mode "$mode_travel"
+set $mode_music music: [p]play/pause [n]ext [b]ack
+bindsym $mod+m mode "$mode_music"
 
-mode "$mode_travel" {
-    bindsym c [class="Slack"] focus; mode "default"
+mode "$mode_music" {
+    bindsym p exec /home/devon/.local/bin/spotify-control playpause; mode "default"
+    bindsym n exec /home/devon/.local/bin/spotify-control next; mode "default"
+    bindsym b exec /home/devon/.local/bin/spotify-control previous; mode "default"
 
     bindsym Escape mode "default"
     bindsym Return mode "default"
 }
-
 
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad
