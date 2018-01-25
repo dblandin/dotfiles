@@ -63,13 +63,14 @@ mode "$mode_open" {
     bindsym Return mode "default"
 }
 
-set $mode_music music: [p]play/pause [n]ext [b]ack
+set $mode_music music: [p]play/pause [n]ext [b]ack [r]ain
 bindsym $mod+m mode "$mode_music"
 
 mode "$mode_music" {
     bindsym p exec playerctl play-pause; mode "default"
     bindsym n exec playerctl next; mode "default"
     bindsym b exec playerctl previous; mode "default"
+    bindsym r exec ~/.local/bin/rain; mode "default"
 
     bindsym Escape mode "default"
     bindsym Return mode "default"

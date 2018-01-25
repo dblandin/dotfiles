@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+video_id="SDmbGrQqWog"
+pattern="[m]pv.*youtube.*$video_id"
+pid=$(pgrep --full "$pattern")
+
+if [ -n "$pid" ]; then
+  kill $pid
+else
+  url="https://www.youtube.com/watch?v=$video_id"
+
+  mpv --no-video --loop=inf --volume=50 --gapless-audio=yes "$url" > /dev/null 2>&1 &
+fi
