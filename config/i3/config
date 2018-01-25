@@ -67,13 +67,24 @@ set $mode_music music: [p]play/pause [n]ext [b]ack
 bindsym $mod+m mode "$mode_music"
 
 mode "$mode_music" {
-    bindsym p exec /home/devon/.local/bin/spotify-control playpause; mode "default"
-    bindsym n exec /home/devon/.local/bin/spotify-control next; mode "default"
-    bindsym b exec /home/devon/.local/bin/spotify-control previous; mode "default"
+    bindsym p exec playerctl play-pause; mode "default"
+    bindsym n exec playerctl next; mode "default"
+    bindsym b exec playerctl previous; mode "default"
 
     bindsym Escape mode "default"
     bindsym Return mode "default"
 }
+
+set $mode_capture capture: [s]creenshot
+bindsym $mod+c mode "$mode_capture"
+
+mode "$mode_capture" {
+    bindsym s exec /home/devon/.local/bin/sshot; mode "default"
+
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
+
 
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad
