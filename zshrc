@@ -27,11 +27,13 @@ compinit
 # environment variables
 # -------------------------------------
 
-export PATH=~/bin:$PATH
+export PATH=~/bin:~/.npm-global/bin:$PATH
 export HISTFILE=~/.zsh_history
 export HISTTIMEFORMAT="%F %T "
 export HISTSIZE=100000
 export SAVEHIST=100000
+export NPM_CONFIG_PREFIX=~/.npm-global
+
 
 setopt INC_APPEND_HISTORY
 setopt histignorespace
@@ -40,13 +42,24 @@ export PS1='$ '
 source /usr/share/chruby/chruby.sh
 source /usr/share/chruby/auto.sh
 
-if [[ $TTY == /dev/tty1 ]] && [[ -z $DISPLAY ]]; then
-  exec startx
-fi
-
 alias vim=$(which nvim)
 alias clip="xclip -o | xclip -sel clip"
 
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
+fi
+
+# source /usr/share/zsh/share/antigen.zsh
+
+# antigen bundle chrissicool/zsh-256color
+# #antigen bundle aws-vault
+# antigen bundle git
+# antigen bundle command-not-found
+# antigen bundle zsh-users/zsh-syntax-highlighting
+# #antigen theme candy
+
+# antigen apply
+
+if [[ $TTY == /dev/tty1 ]] && [[ -z $DISPLAY ]]; then
+  exec startx
 fi

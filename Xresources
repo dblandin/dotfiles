@@ -4,8 +4,8 @@ Xft.rgba: rgb
 Xft.hinting: true
 Xft.hintstyle: hintslight
 
-URxvt.font: xft:Droid Sans Mono-12
-URxvt.boldFont: xft:Droid Sans Mono-12
+URxvt.font: xft:Droid Sans Mono-16
+URxvt.boldFont: xft:Droid Sans Mono-16
 
 URxvt.scrollBar: false
 URxvt.urgentOnBell: true
@@ -19,3 +19,6 @@ URxvt.matcher.button: 1
 URxvt.perl-ext: default,url-select
 URxvt.url-select.launcher: /usr/bin/firefox
 URxvt.url-select.underline: true
+URxvt.cursorColor: gray
+XTerm*cursorColor: gray
+URxvt*cursorUnderline: true
