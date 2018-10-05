@@ -30,9 +30,11 @@ case "$1" in
                 case "$4" in
                     00000000)
                         logger 'AC unpluged'
+                        /home/devon/.local/bin/osb
                         ;;
                     00000001)
                         logger 'AC pluged'
+                        /home/devon/.local/bin/osb
                         ;;
                 esac
                 ;;
