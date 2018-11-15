@@ -45,7 +45,7 @@ Bundle 'chriskempson/vim-tomorrow-theme'
 
 filetype indent plugin on
 
-colorscheme Tomorrow
+colorscheme Tomorrow-Night
 
 " NERDTree
 let NERDTreeQuitOnOpen = 1

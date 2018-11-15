@@ -31,9 +31,9 @@ urxvtd -q -f -o
 xautolock -time 5 -locker slock -corners 0+00 -cornerdelay 0 -detectsleep &
 xbindkeys
 
-systemd-lock-handler xautolock -locknow &
+sudo systemd-lock-handler xautolock -locknow &
 
-[ -f /etc/xprofile ] && source /etc/xprofile
-[ -f ~/.xprofile ] && source ~/.xprofile
+# [ -f /etc/xprofile ] && source /etc/xprofile
+# [ -f ~/.xprofile ] && source ~/.xprofile
 
-exec i3
+# exec i3

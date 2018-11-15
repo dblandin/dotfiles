@@ -27,20 +27,20 @@ compinit
 # environment variables
 # -------------------------------------
 
-export PATH=~/bin:~/.npm-global/bin:$PATH
+export PATH=~/bin:~/.local/bin:~/.npm-global/bin:$PATH
 export HISTFILE=~/.zsh_history
 export HISTTIMEFORMAT="%F %T "
 export HISTSIZE=100000
 export SAVEHIST=100000
-export NPM_CONFIG_PREFIX=~/.npm-global
+# export NPM_CONFIG_PREFIX=~/.npm-global
 
 
 setopt INC_APPEND_HISTORY
 setopt histignorespace
 
 export PS1='$ '
-source /usr/share/chruby/chruby.sh
-source /usr/share/chruby/auto.sh
+# source /usr/share/chruby/chruby.sh
+# source /usr/share/chruby/auto.sh
 
 alias vim=$(which nvim)
 alias clip="xclip -o | xclip -sel clip"
@@ -63,3 +63,7 @@ fi
 if [[ $TTY == /dev/tty1 ]] && [[ -z $DISPLAY ]]; then
   exec startx
 fi
+
+source /usr/share/chruby/chruby.sh
+source /usr/share/chruby/auto.sh
+source /usr/share/nvm/init-nvm.sh

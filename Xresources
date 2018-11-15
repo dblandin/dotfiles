@@ -1,11 +1,11 @@
-!Xft.dpi: 192
+Xft.dpi: 192
 Xft.antialias:true
 Xft.rgba: rgb
 Xft.hinting: true
 Xft.hintstyle: hintslight
 
-URxvt.font: xft:Droid Sans Mono-16
-URxvt.boldFont: xft:Droid Sans Mono-16
+URxvt.font: xft:Droid Sans Mono-12
+URxvt.boldFont: xft:Droid Sans Mono-12
 
 URxvt.scrollBar: false
 URxvt.urgentOnBell: true
@@ -14,11 +14,51 @@ URxvt.scrollStyle: plain
 URxvt.bordeless: true
 URxvt.internalBorder: 0
 URxvt.externalBorder: 0
-URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.matcher.button: 1
-URxvt.perl-ext: default,url-select
-URxvt.url-select.launcher: /usr/bin/firefox
+URxvt.url-select.launcher: /usr/bin/firefox-developer-edition
 URxvt.url-select.underline: true
 URxvt.cursorColor: gray
 XTerm*cursorColor: gray
 URxvt*cursorUnderline: true
+URxvt.perl-lib: /usr/lib/urxvt/perl
+urxvt*perl-ext-common: default,matcher,url-select
+urxvt*urlLauncher: /usr/bin/firefox-developer.edition
+
+rofi.font: Droid Sans Mono 18
+
+! special
+*.foreground:   #c5c8c6
+*.background:   #1d1f21
+*.cursorColor:  #c5c8c6
+
+! black
+*.color0:       #282a2e
+*.color8:       #373b41
+
+! red
+*.color1:       #a54242
+*.color9:       #cc6666
+
+! green
+*.color2:       #8c9440
+*.color10:      #b5bd68
+
+! yellow
+*.color3:       #de935f
+*.color11:      #f0c674
+
+! blue
+*.color4:       #5f819d
+*.color12:      #81a2be
+
+! magenta
+*.color5:       #85678f
+*.color13:      #b294bb
+
+! cyan
+*.color6:       #5e8d87
+*.color14:      #8abeb7
+
+! white
+*.color7:       #707880
+*.color15:      #c5c8c6
