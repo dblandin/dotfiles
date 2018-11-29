@@ -1,4 +1,4 @@
-BROWSER  DEFAULT="/usr/bin/firefox"
+BROWSER  DEFAULT="/usr/bin/google-chrome-stable"
 EDITOR   DEFAULT="/usr/bin/nvim"
 SHELL    DEFAULT="/usr/bin/zsh"
 TERMINAL DEFAULT="/usr/bin/urxvt"
