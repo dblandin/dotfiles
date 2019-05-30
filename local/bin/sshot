@@ -1,7 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
-name=screenshot.$$.png
-scrot "$@" "/tmp/$name"
-
-mv "/tmp/$name" ~/screenshots/
+maim -s /tmp/screenshot.png; /home/devon/.local/bin/imgur /tmp/screenshot.png
+mv /tmp/screenshot.png "/home/devon/screenshots/screenshot.$(date +%s).png"
+notify-send --urgency=low "Screenshot" "$(xclip -o -sel clip)"

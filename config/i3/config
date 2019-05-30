@@ -54,6 +54,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
+bindsym $mod+Shift+p exec /home/devon/.local/bin/sshot
+
 set $mode_open launch: [b]rowser [s]potify
 bindsym $mod+o mode "$mode_open"
 
