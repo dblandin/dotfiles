@@ -21,7 +21,8 @@ focus_follows_mouse no
 exec i3-msg 'workspace number 1: term; exec i3-sensible-terminal'
 exec --no-startup-id redshift-qt
 exec --no-startup-id udiskie --notify --tray --automount
-exec --no-startup-id autorandr --change default --default solo
+exec --no-startup-id xsetroot -solid "#000000"
+exec --no-startup-id hsetroot -solid "#000000"
 
 hide_edge_borders both
 set $border none
