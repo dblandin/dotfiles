@@ -48,6 +48,10 @@ if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
 fi
 
+if [ -f ~/.zshrc_aliases ]; then
+  source ~/.zshrc_aliases
+fi
+
 # source /usr/share/zsh/share/antigen.zsh
 
 # antigen bundle chrissicool/zsh-256color
