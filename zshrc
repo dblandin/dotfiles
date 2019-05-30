@@ -42,7 +42,6 @@ export PS1='$ '
 # source /usr/share/chruby/chruby.sh
 # source /usr/share/chruby/auto.sh
 
-alias vim=$(which nvim)
 alias clip="xclip -o | xclip -sel clip"
 
 if [ -f ~/.zshrc.local ]; then

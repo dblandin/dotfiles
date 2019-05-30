@@ -1,5 +1,5 @@
 BROWSER  DEFAULT="/usr/bin/google-chrome-stable"
-EDITOR   DEFAULT="/usr/bin/nvim"
+EDITOR   DEFAULT="/usr/bin/vim"
 SHELL    DEFAULT="/usr/bin/zsh"
 TERMINAL DEFAULT="/usr/bin/urxvt"
-VISUAL   DEFAULT="/usr/bin/nvim"
+VISUAL   DEFAULT="/usr/bin/vim"
