@@ -39,8 +39,6 @@ setopt INC_APPEND_HISTORY
 setopt histignorespace
 
 export PS1='$ '
-# source /usr/share/chruby/chruby.sh
-# source /usr/share/chruby/auto.sh
 
 alias clip="xclip -o | xclip -sel clip"
 
@@ -52,21 +50,6 @@ if [ -f ~/.zshrc_aliases ]; then
   source ~/.zshrc_aliases
 fi
 
-# source /usr/share/zsh/share/antigen.zsh
-
-# antigen bundle chrissicool/zsh-256color
-# #antigen bundle aws-vault
-# antigen bundle git
-# antigen bundle command-not-found
-# antigen bundle zsh-users/zsh-syntax-highlighting
-# #antigen theme candy
-
-# antigen apply
-
 if [[ $TTY == /dev/tty1 ]] && [[ -z $DISPLAY ]]; then
   exec startx
 fi
-
-source /usr/share/chruby/chruby.sh
-source /usr/share/chruby/auto.sh
-source /usr/share/nvm/init-nvm.sh
