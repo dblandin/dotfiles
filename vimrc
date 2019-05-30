@@ -55,6 +55,10 @@ let NERDTreeWinPos = "right"
 au BufNewFile,BufRead *.md,*.markdown setlocal filetype=markdown
 au BufRead,BufNewFile *.md setlocal textwidth=80
 
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader Commands
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
