@@ -46,6 +46,10 @@ if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
 fi
 
+if [ -f ~/.zshrc_functions ]; then
+  source ~/.zshrc_functions
+fi
+
 if [ -f ~/.zshrc_aliases ]; then
   source ~/.zshrc_aliases
 fi
