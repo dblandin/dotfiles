@@ -1,35 +1,31 @@
 #!/usr/bin/env sh
 #
-# pbrisbin 2013 - amixer with notifications.
+# dblandin 2019 - amixer with notifications.
 #
 ###
-mixer() {
-  local cmd="$1" level state icon message
 
-  body="$(amixer sset Master "$cmd" |\
-    sed '/.*Mono: Playback .* \[\(.*\)%\] .* \[\(on\|off\)\].*/!d; s//\1 \2/')"
+notify() {
+  level="$(pamixer --get-volume)"
+  human="$(pamixer --get-volume-human)"
 
-  level="${body% *}"
-  state="${body#* }"
-
-  if [ "$state" = 'on' ]; then
+  if [ "$human" = 'muted' ]; then
+    icon='audio-volume-muted'
+    message="Muted"
+  else
     icon='audio-volume-low'
     message="Level: $level%"
 
     [ $level -gt 33 ] && icon='audio-volume-medium'
     [ $level -gt 66 ] && icon='audio-volume-high'
-  else
-    icon='audio-volume-muted'
-    message="Muted"
   fi
 
   notify-send -t 1250 -i "$icon" 'Volume' "$message"
 }
 
 case "$1" in
-  up)     mixer '3%+'   ;;
-  down)   mixer '3%-'   ;;
-  toggle) mixer 'toggle';;
+  up)     pamixer --increase 3 && notify;;
+  down)   pamixer --decrease 3 && notify;;
+  toggle) pamixer --toggle-mute && notify;;
   *)
     printf "usage: nmixer [up|down|toggle]\n" >&2
     exit 64
