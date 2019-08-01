@@ -1,5 +1,5 @@
 BROWSER  DEFAULT="/usr/bin/google-chrome-stable"
 EDITOR   DEFAULT="/usr/bin/vim"
 SHELL    DEFAULT="/usr/bin/zsh"
-TERMINAL DEFAULT="/usr/bin/urxvt"
+TERMINAL DEFAULT="/usr/bin/sakura"
 VISUAL   DEFAULT="/usr/bin/vim"
