@@ -1,9 +1,16 @@
 {
   "journals": {
-    "default": "/home/devon/journal.txt"
+    "default": {
+      "journal": "/home/devon/drive/journal.txt",
+      "encrypt": true
+    },
+    "personal": {
+      "journal": "/home/devon/drive/personal.txt",
+      "encrypt": true
+    }
   },
   "editor": "/usr/bin/vim",
-  "encrypt": false,
+  "encrypt": true,
   "default_hour": 9,
   "default_minute": 0,
   "timeformat": "%Y-%m-%d %H:%M",
