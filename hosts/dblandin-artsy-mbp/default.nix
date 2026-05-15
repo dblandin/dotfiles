@@ -26,6 +26,7 @@
     enable = true;
     onActivation.cleanup = "uninstall";
     casks = [
+      "alfred"
       "bitwarden"
       "brave-browser"
       "caffeine"
