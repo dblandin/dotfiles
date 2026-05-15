@@ -27,7 +27,9 @@
   homebrew = {
     enable = true;
     onActivation.cleanup = "uninstall";
-    brews = [ ];
+    brews = [
+      "libyaml"
+    ];
     casks = [
       "1password"
       "alfred"
