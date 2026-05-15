@@ -47,11 +47,21 @@
     };
   };
 
+  programs.starship.enable = true;
+
   programs.zsh = {
     enable = true;
     shellAliases = {
       darwin-switch = "sudo darwin-rebuild switch --flake ~/dotfiles#dblandin-artsy-mbp";
     };
+
+    history = {
+      size = 1000;
+      save = 1000;
+      path = "$HOME/.zsh_history";
+      ignoreSpace = true;
+    };
+
   };
 
   programs.git = {
