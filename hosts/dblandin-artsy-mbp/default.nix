@@ -1,4 +1,9 @@
-{ pkgs, inputs, self, ... }:
+{
+  pkgs,
+  inputs,
+  self,
+  ...
+}:
 
 {
   nixpkgs.config.allowUnfree = true;
@@ -26,6 +31,7 @@
       "caffeine"
       "claude"
       "codex"
+      "figma"
       "obsidian"
       "slack"
     ];
