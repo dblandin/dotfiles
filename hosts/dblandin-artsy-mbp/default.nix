@@ -41,6 +41,7 @@
       "figma"
       "ghostty"
       "granola"
+      "jabra-direct"
       "notion"
       "nordvpn"
       "obsidian"
