@@ -32,10 +32,17 @@
 
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
+        anthropic.claude-code
+        graphql.vscode-graphql-syntax
         jnoortheen.nix-ide
+        tamasfe.even-better-toml
+        vscodevim.vim
       ];
       userSettings = {
         "editor.formatOnSave" = true;
+        "vim.enable" = true;
+        "vim.statusBarColorControl" = true;
+        "vim.enableNeovim" = false;
       };
     };
   };
