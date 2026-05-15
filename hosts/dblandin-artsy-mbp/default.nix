@@ -27,7 +27,9 @@
   homebrew = {
     enable = true;
     onActivation.cleanup = "uninstall";
+    brews = [ ];
     casks = [
+      "1password"
       "alfred"
       "bitwarden"
       "brainfm"
@@ -37,8 +39,20 @@
       "claude"
       "codex"
       "figma"
+      "ghostty"
+      "granola"
+      "notion"
+      "nordvpn"
       "obsidian"
+      "qobuz"
+      "signal"
       "slack"
+      "tailscale-app"
+      "todoist-app"
+      "tunnelblick"
+      "veracrypt-fuse-t"
+      "vlc"
+      "whatsapp"
     ];
   };
 
