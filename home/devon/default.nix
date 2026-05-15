@@ -57,6 +57,9 @@
     shellAliases = {
       darwin-switch = "sudo darwin-rebuild switch --flake ~/dotfiles#dblandin-artsy-mbp";
     };
+    sessionVariables = {
+      RUBY_CONFIGURE_OPTS = "--disable-install-rdoc";
+    };
 
     history = {
       size = 1000;
