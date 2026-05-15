@@ -9,10 +9,12 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.overlays = [ inputs.claude-code.overlays.default ];
 
-  environment.systemPackages = [
-    pkgs.claude-code
-    pkgs.gh
-    pkgs.vim
+  environment.systemPackages = with pkgs; [
+    claude-code
+    unstable.colima
+    docker
+    gh
+    vim
   ];
 
   programs.zsh.enable = true;
