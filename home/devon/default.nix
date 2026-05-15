@@ -61,7 +61,18 @@
       path = "$HOME/.zsh_history";
       ignoreSpace = true;
     };
+  };
 
+  programs.atuin = {
+    enable = true;
+    enableZshIntegration = true;
+
+    settings = {
+      auto_sync = true;
+      sync_frequency = "5m";
+      filter_mode = "host";
+      # ... other atuin settings
+    };
   };
 
   programs.git = {
