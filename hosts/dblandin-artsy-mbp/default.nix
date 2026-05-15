@@ -28,8 +28,10 @@
     casks = [
       "alfred"
       "bitwarden"
+      "brainfm"
       "brave-browser"
       "caffeine"
+      "chatgpt"
       "claude"
       "codex"
       "figma"
