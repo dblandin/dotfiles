@@ -59,11 +59,44 @@
   security.pam.services.sudo_local.touchIdAuth = true;
 
   system.defaults = {
-    dock.autohide = true;
-    dock.mru-spaces = false;
-    finder.AppleShowAllExtensions = true;
-    finder.FXPreferredViewStyle = "clmv";
+    dock = {
+      autohide = true;
+      mru-spaces = false;
+      show-recents = false; # Hide recent apps in dock
+      tilesize = 40; # Icon size
+      persistent-apps = [ ]; # Clear default dock apps
+    };
+
+    finder = {
+      AppleShowAllExtensions = true;
+      FXPreferredViewStyle = "clmv"; # List view
+      ShowPathbar = true; # Show path at bottom
+      ShowStatusBar = true; # Show file count at bottom
+      _FXShowPosixPathInTitle = true; # Show full path in title
+      FXDefaultSearchScope = "SCcf"; # Search current folder by default
+    };
+
     screencapture.location = "~/Pictures/screenshots";
+
+    # Keyboard & Input
+    NSGlobalDomain = {
+      ApplePressAndHoldEnabled = false;
+      InitialKeyRepeat = 15; # Faster key repeat (default 15, 10-120)
+      KeyRepeat = 2; # Repeat speed (default 2, 1-120)
+      AppleKeyboardUIMode = 3; # Full keyboard access
+    };
+
+    # Trackpad
+    trackpad = {
+      Clicking = true; # Tap to click
+      TrackpadThreeFingerDrag = true; # Three finger drag
+    };
+
+    # General
+    ".GlobalPreferences"."com.apple.mouse.scaling" = -1.0; # Disable mouse acceleration
+
+    # Disable spelling autocorrect
+    NSGlobalDomain."NSAutomaticSpellingCorrectionEnabled" = false;
   };
 
   nix.settings.experimental-features = "nix-command flakes";
