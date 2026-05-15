@@ -34,6 +34,7 @@
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
         anthropic.claude-code
+        biomejs.biome
         graphql.vscode-graphql-syntax
         jnoortheen.nix-ide
         tamasfe.even-better-toml
