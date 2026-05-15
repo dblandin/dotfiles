@@ -8,7 +8,8 @@
 
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
-    pkgs.nixfmt
+    nixfmt
+    watchman
   ];
 
   # mise is a runtime version manager(replaces nvm, pyenv, rbenv, etc.).
