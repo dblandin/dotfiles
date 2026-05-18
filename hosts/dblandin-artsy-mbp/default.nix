@@ -46,6 +46,7 @@
       "granola"
       "insta360-link-controller"
       "jabra-direct"
+      "loom"
       "notion"
       "nordvpn"
       "obsidian"
