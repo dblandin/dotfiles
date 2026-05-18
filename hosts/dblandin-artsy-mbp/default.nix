@@ -100,7 +100,9 @@
     };
 
     # General
-    ".GlobalPreferences"."com.apple.mouse.scaling" = -1.0; # Disable mouse acceleration
+    ".GlobalPreferences" = {
+      "com.apple.mouse.scaling" = 2.0;
+    };
 
     # Disable spelling autocorrect
     NSGlobalDomain."NSAutomaticSpellingCorrectionEnabled" = false;
