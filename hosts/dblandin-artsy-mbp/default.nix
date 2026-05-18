@@ -14,6 +14,7 @@
     unstable.colima
     docker
     gh
+    poppler-utils
     vim
   ];
 
