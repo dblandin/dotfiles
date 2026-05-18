@@ -44,6 +44,7 @@
       "figma"
       "ghostty"
       "granola"
+      "insta360-link-controller"
       "jabra-direct"
       "notion"
       "nordvpn"
@@ -57,6 +58,7 @@
       "veracrypt-fuse-t"
       "vlc"
       "whatsapp"
+      "zwift"
     ];
   };
 
