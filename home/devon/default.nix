@@ -18,6 +18,7 @@
   programs.mise = {
     enable = true;
     enableZshIntegration = true;
+    package = pkgs.unstable.mise;
 
     globalConfig = {
       tools = {
