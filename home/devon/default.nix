@@ -129,6 +129,8 @@
     };
   };
 
+  home.sessionPath = [ "$HOME/.local/bin" ];
+
   home.sessionVariables = {
     EDITOR = "vim";
   };
