@@ -11,6 +11,7 @@
     unstable.awscli2
     biome
     nixfmt
+    tree
     watchman
   ];
 
@@ -36,6 +37,7 @@
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
         anthropic.claude-code
+        bbenoist.nix
         biomejs.biome
         graphql.vscode-graphql-syntax
         jnoortheen.nix-ide
