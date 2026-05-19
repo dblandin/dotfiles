@@ -49,6 +49,7 @@
       ];
       userSettings = {
         "editor.formatOnSave" = true;
+        "terminal.integrated.fontFamily" = "JetBrainsMono Nerd Font";
         "vim.statusBarColorControl" = true;
         "vim.enableNeovim" = false;
         "json.schemaDownload.trustedDomains" = {
