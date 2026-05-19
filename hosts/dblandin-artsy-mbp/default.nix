@@ -32,8 +32,9 @@
       "artsy/formulas"
     ];
     brews = [
-      "libyaml"
+      "aws-iam-authenticator"
       "hokusai"
+      "libyaml"
     ];
     casks = [
       "1password"
