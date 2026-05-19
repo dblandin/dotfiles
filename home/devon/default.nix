@@ -58,6 +58,8 @@
     };
   };
 
+  programs.gh.enable = true;
+
   programs.starship.enable = true;
 
   programs.zsh = {
