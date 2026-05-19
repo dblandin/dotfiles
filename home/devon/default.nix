@@ -47,6 +47,9 @@
         "vim.enable" = true;
         "vim.statusBarColorControl" = true;
         "vim.enableNeovim" = false;
+        "json.schemaDownload.trustedDomains" = {
+          "https://biomejs.dev" = true;
+        };
       };
     };
   };
