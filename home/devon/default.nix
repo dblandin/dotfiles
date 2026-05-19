@@ -69,11 +69,10 @@
       RUBY_CONFIGURE_OPTS = "--disable-install-rdoc";
     };
 
+    # Disable zsh native history - atuin handles history instead
     history = {
-      size = 1000;
-      save = 1000;
-      path = "$HOME/.zsh_history";
-      ignoreSpace = true;
+      size = 0;
+      save = 0;
     };
   };
 
