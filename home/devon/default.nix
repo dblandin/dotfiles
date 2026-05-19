@@ -58,6 +58,8 @@
     };
   };
 
+  programs.bat.enable = true;
+
   programs.gh.enable = true;
 
   programs.starship.enable = true;
@@ -65,6 +67,7 @@
   programs.zsh = {
     enable = true;
     shellAliases = {
+      cat = "bat";
       darwin-switch = "sudo darwin-rebuild switch --flake ~/dotfiles#dblandin-artsy-mbp";
     };
     sessionVariables = {
