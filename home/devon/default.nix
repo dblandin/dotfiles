@@ -10,6 +10,7 @@
   home.packages = with pkgs; [
     unstable.awscli2
     biome
+    gh-dash
     nixfmt
     tree
     watchman
