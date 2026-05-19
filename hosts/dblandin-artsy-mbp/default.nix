@@ -28,8 +28,12 @@
   homebrew = {
     enable = true;
     onActivation.cleanup = "uninstall";
+    taps = [
+      "artsy/formulas"
+    ];
     brews = [
       "libyaml"
+      "hokusai"
     ];
     casks = [
       "1password"
