@@ -49,7 +49,6 @@
       ];
       userSettings = {
         "editor.formatOnSave" = true;
-        "vim.enable" = true;
         "vim.statusBarColorControl" = true;
         "vim.enableNeovim" = false;
         "json.schemaDownload.trustedDomains" = {
