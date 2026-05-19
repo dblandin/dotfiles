@@ -63,7 +63,12 @@
 
   programs.gh.enable = true;
 
-  programs.starship.enable = true;
+  programs.starship = {
+    enable = true;
+    settings = {
+      docker_context.disabled = true;
+    };
+  };
 
   programs.zoxide = {
     enable = true;
