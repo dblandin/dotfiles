@@ -15,19 +15,22 @@
     watchman
   ];
 
-  # mise is a runtime version manager(replaces nvm, pyenv, rbenv, etc.).
-  # enabling it installs the binary and wires up shell integration automatically.
   programs.mise = {
     enable = true;
-    # Injects`eval "$(mise activate zsh)"` into the user's zsh config
     enableZshIntegration = true;
-    # Optionally declare global tools declaratively:
-    # globalConfig = {
-    #   tools = {
-    #     node = "lts";
-    #     python = "3.12";
-    #   };
-    # };
+
+    globalConfig = {
+      tools = {
+        kubectl = "1.22.17";
+        node = "22";
+        python = "3.13";
+        ruby = "3.4";
+      };
+
+      settings = {
+        experimental = true;
+      };
+    };
   };
 
   programs.vscode = {
