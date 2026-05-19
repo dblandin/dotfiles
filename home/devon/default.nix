@@ -76,6 +76,9 @@
       size = 0;
       save = 0;
     };
+
+    syntaxHighlighting.enable = true;
+    autosuggestion.enable = true;
   };
 
   programs.atuin = {
